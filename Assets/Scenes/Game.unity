@@ -183,6 +183,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
 --- !u!1001 &1986835004480589104
