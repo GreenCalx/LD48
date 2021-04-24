@@ -21,7 +21,7 @@ public class ThrusterBehavior : ShipElem
     void Start()
     {
         mParentBody = mParent.GetComponent<Rigidbody2D>();
-        mConsumption = 10;
+        mConsumption = 1;
     }
 
     void AddThrust()
