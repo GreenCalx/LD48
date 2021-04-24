@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
-    public int mHealth;
+    public float mHealth;
     [SerializeField]
-    private int mCurrentHealth;
+    private float mCurrentHealth;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,7 +18,7 @@ public class Damageable : MonoBehaviour
         
     }
 
-    void HitMe(int Damage)
+    void HitMe(float Damage)
     {
         mCurrentHealth -= Damage;
         if (mCurrentHealth <= 0) Die();
@@ -33,6 +33,15 @@ public class Damageable : MonoBehaviour
         if (Ship) Ship.YOUDEAD();
 
         GameObject.Destroy(this.gameObject);
+    }
+
+    public void Regenerate(float life)
+    {
+        mCurrentHealth += life;
+        if (mCurrentHealth > mHealth)
+        {
+            mCurrentHealth = mHealth;
+        }
     }
 
     // Update is called once per frame

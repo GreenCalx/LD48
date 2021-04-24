@@ -15,8 +15,6 @@ public class ShipBehavior : MonoBehaviour
     public LaserBehavior mLaser;
     public RepairBehavior mRepair;
 
-    public float mHaulIntegrity = 100;
-
     // World ref for gravity and ennmies?
 
     // Start is called before the first frame update
@@ -28,7 +26,11 @@ public class ShipBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        var damageable = GetComponent<Damageable>();
+        if (mRepair.mActivated)
+        {
+            damageable.Regenerate(mRepair.mLifePerFrame);
+        }
     }
 
     public void YOUDEAD()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RepairBehavior : ShipElem
 {
+    public float mLifePerFrame = 10;
+
     // Start is called before the first frame update
     void Start()
     {
