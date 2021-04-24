@@ -11,6 +11,7 @@ public class ShipBehavior : MonoBehaviour
 
     public Battery mBattery;
     public ThrusterBehavior[] Thrusters;
+    public ShieldBehavior[] Shields;
 
 
     // World ref for gravity and ennmies?
