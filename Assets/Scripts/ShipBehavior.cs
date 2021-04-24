@@ -8,7 +8,8 @@ public class ShipBehavior : MonoBehaviour
     //Battery      MyBattery;
     //Weapons[]    MyWeapons;
     //Shields[]    MyShields;
-    //Thrusters[]  MyThursters;
+
+    public ThrusterBehavior[] Thrusters;
 
     // World ref for gravity and ennmies?
 
