@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipBehavior : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ShipBehavior : MonoBehaviour
 
     public Battery mBattery;
     public ThrusterBehavior[] Thrusters;
+
 
     // World ref for gravity and ennmies?
 
@@ -23,5 +25,10 @@ public class ShipBehavior : MonoBehaviour
     void FixedUpdate()
     {
 
+    }
+
+    public void YOUDEAD()
+    {
+        SceneManager.LoadScene("DeathScreen");
     }
 }
