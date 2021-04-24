@@ -1795,6 +1795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2493193511214985369}
   - component: {fileID: 4595846438728216207}
+  - component: {fileID: 2760206858919408054}
   m_Layer: 0
   m_Name: Turretport
   m_TagString: Untagged
@@ -1809,15 +1810,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6060905102879983577}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3759302, w: 0.926648}
+  m_LocalPosition: {x: 0.7, y: 0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 115999929513424384}
   - {fileID: 7422396273540546497}
   m_Father: {fileID: 1120088387546842872}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.164}
 --- !u!114 &4595846438728216207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,6 +1834,25 @@ MonoBehaviour:
   mActivated: 0
   mConsumption: 0
   mType: 0
+  mForce: 40
+  mFireRate: 0.5
+  missile: {fileID: 185651626095629572, guid: 407e604b195acaf4a91c592293874482, type: 3}
+--- !u!70 &2760206858919408054
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060905102879983577}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10204546, y: 1.442291}
+  m_Size: {x: 1.7200168, y: 3.0605361}
+  m_Direction: 0
 --- !u!1 &6211363925206324184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3897424652584110027}
   - component: {fileID: 8214945187033207511}
+  - component: {fileID: 3262728330065540771}
   m_Layer: 0
   m_Name: TurretStarbord
   m_TagString: Untagged
@@ -2053,15 +2074,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6844839897438384560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.26972738, w: 0.96293676}
+  m_LocalPosition: {x: 0.66, y: -0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2728984354703759776}
   - {fileID: 4556852716244561251}
   m_Father: {fileID: 1120088387546842872}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.296}
 --- !u!114 &8214945187033207511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2077,6 +2098,25 @@ MonoBehaviour:
   mActivated: 0
   mConsumption: 0
   mType: 1
+  mForce: 40
+  mFireRate: 0.5
+  missile: {fileID: 185651626095629572, guid: 407e604b195acaf4a91c592293874482, type: 3}
+--- !u!70 &3262728330065540771
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844839897438384560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1020455, y: -1.442291}
+  m_Size: {x: 1.720017, y: 3.060536}
+  m_Direction: 0
 --- !u!1 &6874896106608297771
 GameObject:
   m_ObjectHideFlags: 0

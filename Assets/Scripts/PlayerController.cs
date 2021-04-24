@@ -124,8 +124,6 @@ public class PlayerController : MonoBehaviour
 
     private void doAction()
     {
-
-
         // activate butn
         if (!!activator_in_range)
         {
