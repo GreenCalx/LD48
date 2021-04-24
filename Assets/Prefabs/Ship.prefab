@@ -200,7 +200,6 @@ MonoBehaviour:
   mScan: {fileID: 0}
   mLaser: {fileID: 0}
   mRepair: {fileID: 0}
-  mHaulIntegrity: 100
 --- !u!50 &1120088387546842821
 Rigidbody2D:
   serializedVersion: 4
@@ -1865,7 +1864,8 @@ MonoBehaviour:
   mActivated: 0
   mConsumption: 0
   mType: 0
-  mForce: 40
+  mNumberOfMissiles: 15
+  mForce: 15
   mFireRate: 0.5
   missile: {fileID: 185651626095629572, guid: 407e604b195acaf4a91c592293874482, type: 3}
   shoot_straight_direction: {fileID: 1099532829663859496}
@@ -2131,7 +2131,8 @@ MonoBehaviour:
   mActivated: 0
   mConsumption: 0
   mType: 1
-  mForce: 40
+  mNumberOfMissiles: 15
+  mForce: 15
   mFireRate: 0.5
   missile: {fileID: 185651626095629572, guid: 407e604b195acaf4a91c592293874482, type: 3}
   shoot_straight_direction: {fileID: 3631668300785918127}
@@ -2852,6 +2853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mActivated: 0
   mConsumption: 0
+  mLifePerFrame: 10
 --- !u!1 &8734565245164342367
 GameObject:
   m_ObjectHideFlags: 0

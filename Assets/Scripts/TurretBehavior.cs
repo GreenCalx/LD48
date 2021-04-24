@@ -7,6 +7,7 @@ public class TurretBehavior : ShipElem
     public enum Type { Port, Starbord, Null };
     public Type mType = Type.Null;
     
+    public float mNumberOfMissiles;
     public float mForce;
     public float mFireRate;
     
@@ -109,6 +110,7 @@ public class TurretBehavior : ShipElem
 
             new_missile.target = target.transform;
             shoot_target(new_missile.transform, target.transform);
+            Debug.Log("Shoot target-");
 
         } else {
             // Or shoot straight-y
@@ -116,9 +118,28 @@ public class TurretBehavior : ShipElem
             shoot_straight(new_missile.transform);
         }
 
+        // check if we need to autodestroy some missilez
+        checkInvokedMissileSize();
+
         // reset CD to finish
         time_since_last_shot = 0f;
 
+    }
+
+    private void checkInvokedMissileSize()
+    {
+        if ( mNumberOfMissiles < 0 )
+            return;
+            
+        while ( invoked_missiles.Count > mNumberOfMissiles )
+        {
+            Missile to_explode = invoked_missiles[0];
+            if (!!to_explode)
+            {
+                invoked_missiles.RemoveAt(0);
+                to_explode.explode();
+            }
+        }
     }
 
     private void shoot_target(Transform iProjectile, Transform iTarget)
@@ -127,6 +148,7 @@ public class TurretBehavior : ShipElem
         var Direction = (iTarget.position - transform.position).normalized;
         RB.AddForce(Direction * mForce, ForceMode2D.Impulse);
         RB.AddTorque(mForce, ForceMode2D.Impulse);
+
     }
 
     private void shoot_straight(Transform iProjectile)

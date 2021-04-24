@@ -30,6 +30,6 @@ public class Missile : Damager
 
     public void explode()
     {
-        DestroyImmediate(this);
+        DestroyImmediate(this.gameObject);
     }
 }
