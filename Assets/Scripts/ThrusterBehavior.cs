@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Thursters are object that will apply force to parent in there current Forward direction
-public class ThrusterBehavior : MonoBehaviour
+public class ThrusterBehavior : ShipElem
 {
     public ShipBehavior mParent;
     public Rigidbody2D mParentBody;
@@ -12,12 +12,12 @@ public class ThrusterBehavior : MonoBehaviour
     public Type mType = Type.Null;
 
     public float mForce = 1f;
-    public bool mActivated = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        mParentBody = mParent.GetComponent<Rigidbody2D>(); 
+        mParentBody = mParent.GetComponent<Rigidbody2D>();
+        mConsumption = 10;
     }
 
     void AddThrust()
