@@ -1,0 +1,2 @@
+
+1. Laserbeam marche pas au start de la scene quand le vaisseau a 0 vélocité. Après c'est RAS dès la première mini impulsion ?

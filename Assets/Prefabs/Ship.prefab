@@ -1983,6 +1983,7 @@ MonoBehaviour:
   mForce: 17
   mFireRate: 0.5
   missile: {fileID: 185651626095629572, guid: 407e604b195acaf4a91c592293874482, type: 3}
+  guided_missile: {fileID: 7957192989284087109, guid: 595528708ea5f614f845f9ebff397c6e, type: 3}
   shooting_point: {fileID: 2884369365420709927}
   shoot_straight_direction: {fileID: 1099532829663859496}
 --- !u!70 &2760206858919408054
@@ -2252,6 +2253,7 @@ MonoBehaviour:
   mForce: 17
   mFireRate: 0.5
   missile: {fileID: 185651626095629572, guid: 407e604b195acaf4a91c592293874482, type: 3}
+  guided_missile: {fileID: 7957192989284087109, guid: 595528708ea5f614f845f9ebff397c6e, type: 3}
   shooting_point: {fileID: 1088781529888080599}
   shoot_straight_direction: {fileID: 3631668300785918127}
 --- !u!70 &3262728330065540771
