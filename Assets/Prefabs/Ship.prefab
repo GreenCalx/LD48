@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1120088387546842823}
   - component: {fileID: 1120088387546842821}
   - component: {fileID: 1120088387546842822}
+  - component: {fileID: 1192708387}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -119,8 +120,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.5393803
   m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 0
@@ -145,6 +146,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &1192708387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120088387546842874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc71fe03f3a9a4943aa59939f718a266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mHealth: 100
+  mCurrentHealth: 100
 --- !u!1 &4409015193606629562
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMax: 100
   mEnergy: 100
-  mRegen: 0
+  mRegen: 100
   mShipElems:
   - {fileID: 5179066862477818154}
   - {fileID: 919909651165950252}
@@ -577,6 +592,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1120088387546842872}
     m_Modifications:
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Volume
+      value: 0.23
+      objectReference: {fileID: 0}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mParent
       value: 
