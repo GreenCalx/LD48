@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 public class ShipBehavior : MonoBehaviour
 {
     //InputManager InputManager;
-    //Weapons[]    MyWeapons;
-    //Shields[]    MyShields;
 
     public Battery mBattery;
-    public ThrusterBehavior[] Thrusters;
-    public ShieldBehavior[] Shields;
+    public ThrusterBehavior[] mThrusters;
+    public ShieldBehavior[] mShields;
+    public TurretBehavior[] mTurrets;
+    public ScanBehavior mScan;
+    public LaserBehavior mLaser;
+    public RepairBehavior mRepair;
 
+    public float mHaulIntegrity = 100;
 
     // World ref for gravity and ennmies?
 

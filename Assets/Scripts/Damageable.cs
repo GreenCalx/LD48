@@ -10,10 +10,7 @@ public class Damageable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var CollisionDamager = collision.gameObject.GetComponent<Damager>();
-        if(CollisionDamager) {
-            HitMe(CollisionDamager.GetDamage());
-        }
+        ExecuteOnCollide(collision);
     }
     // Start is called before the first frame update
     void Start()
@@ -42,5 +39,14 @@ public class Damageable : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public virtual void ExecuteOnCollide(Collision2D collision)
+    {
+        var CollisionDamager = collision.gameObject.GetComponent<Damager>();
+        if (CollisionDamager)
+        {
+            HitMe(CollisionDamager.GetDamage());
+        }
     }
 }
