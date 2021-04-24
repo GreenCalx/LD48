@@ -8,6 +8,10 @@ public class ThrusterBehavior : ShipElem
     public ShipBehavior mParent;
     public Rigidbody2D mParentBody;
 
+    public Sprite mBoostSprite;
+
+    public AudioSource mBoost;
+
     public enum Type { Clockwise, Anticlockwise, Forward, Null };
     public Type mType = Type.Null;
 
@@ -28,12 +32,23 @@ public class ThrusterBehavior : ShipElem
         }
     }
 
+    void DisplayThrust(bool True)
+    {
+        var Renderer = GetComponentInChildren<SpriteRenderer>();
+        Renderer.enabled = True;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
        if(mActivated)
         {
             AddThrust();
+            DisplayThrust(true);
         } 
+       else
+        {
+            DisplayThrust(false);
+        }
     }
 }
