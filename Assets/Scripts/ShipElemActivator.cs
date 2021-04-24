@@ -12,6 +12,7 @@ public class ShipElemActivator : MonoBehaviour
     void Start()
     {
         enabled = activated_obj.mActivated;
+        update_color();
     }
 
     // Update is called once per frame
@@ -20,11 +21,8 @@ public class ShipElemActivator : MonoBehaviour
         
     }
 
-    public void toggle(){
-
-        activated_obj.mActivated = !activated_obj.mActivated;
-
-        /// DEBUG
+    private void update_color()
+    {
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (!!sr)
         {
@@ -32,11 +30,28 @@ public class ShipElemActivator : MonoBehaviour
         }
     }
 
+    public void toggle(){
+
+        activated_obj.mActivated = !activated_obj.mActivated;
+
+        update_color();
+    }
+
     public void OnTriggerEnter2D(Collider2D iCol)
     {
         PlayerController pc = iCol.GetComponent<PlayerController>();
         if (!!pc)
             pc.set_activator_in_range(this);
+    }
+
+    public void OnTriggerStay2D(Collider2D iCol)
+    {
+        PlayerController pc = iCol.GetComponent<PlayerController>();
+        if (!!pc)
+        {
+            if ( !pc.has_activator_in_range() )
+                pc.set_activator_in_range(this);
+        }
     }
 
     public void OnTriggerExit2D(Collider2D iCol)
