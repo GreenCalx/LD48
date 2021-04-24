@@ -12,6 +12,7 @@ public class TurretBehavior : ShipElem
     public float mFireRate;
     
     public GameObject missile;
+    public Transform shooting_point; //is child transform, could be retrieved
     public Transform shoot_straight_direction; //is child transform, could be retrieved
 
     private List<Missile> invoked_missiles;
@@ -130,14 +131,16 @@ public class TurretBehavior : ShipElem
     {
         if ( mNumberOfMissiles < 0 )
             return;
-            
+        
+        invoked_missiles.RemoveAll(item => item == null);
         while ( invoked_missiles.Count > mNumberOfMissiles )
         {
             Missile to_explode = invoked_missiles[0];
             if (!!to_explode)
             {
-                invoked_missiles.RemoveAt(0);
+                invoked_missiles.Remove(to_explode);
                 to_explode.explode();
+                invoked_missiles.RemoveAll(item => item == null);
             }
         }
     }
@@ -145,7 +148,7 @@ public class TurretBehavior : ShipElem
     private void shoot_target(Transform iProjectile, Transform iTarget)
     {
         var RB = iProjectile.GetComponent<Rigidbody2D>();
-        var Direction = (iTarget.position - transform.position).normalized;
+        var Direction = (iTarget.position - shooting_point.position).normalized;
         RB.AddForce(Direction * mForce, ForceMode2D.Impulse);
         RB.AddTorque(mForce, ForceMode2D.Impulse);
 
@@ -154,8 +157,7 @@ public class TurretBehavior : ShipElem
     private void shoot_straight(Transform iProjectile)
     {
         var RB = iProjectile.GetComponent<Rigidbody2D>();
-        var Direction = shoot_straight_direction.position;
-        Debug.DrawRay( transform.position, Direction * mForce, Color.red);
+        var Direction = shoot_straight_direction.position - shooting_point.position;
         RB.AddForce(Direction * mForce, ForceMode2D.Impulse);
         RB.AddTorque(mForce, ForceMode2D.Impulse);
     }
