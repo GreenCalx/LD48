@@ -135,6 +135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 919909651165950252, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: mForce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1120088387546842872, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -182,6 +186,22 @@ PrefabInstance:
     - target: {fileID: 1120088387546842874, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986469080984910885, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986469080984910885, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Volume
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986469080984910885, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b18a312f2fe2cf4aaf271ae9cb5875c, type: 3}
+    - target: {fileID: 5179066862477818154, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: mForce
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
