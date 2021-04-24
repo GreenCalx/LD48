@@ -10,9 +10,9 @@ public class TurretBehavior : ShipElem
     public float mForce;
     public float mFireRate;
     
-
     public GameObject missile;
-    
+    public Transform shoot_straight_direction; //is child transform, could be retrieved
+
     private List<Missile> invoked_missiles;
     protected float time_since_last_shot;
     protected List<Damageable> tracked_damageables;
@@ -108,11 +108,12 @@ public class TurretBehavior : ShipElem
                 target = tracked_damageables[0];
 
             new_missile.target = target.transform;
-            shoot_target(target.transform);
+            shoot_target(new_missile.transform, target.transform);
 
         } else {
             // Or shoot straight-y
             Debug.Log("Shoot straight-");
+            shoot_straight(new_missile.transform);
         }
 
         // reset CD to finish
@@ -120,10 +121,19 @@ public class TurretBehavior : ShipElem
 
     }
 
-    private void shoot_target(Transform iTarget)
+    private void shoot_target(Transform iProjectile, Transform iTarget)
     {
-        var RB = GetComponent<Rigidbody2D>();
+        var RB = iProjectile.GetComponent<Rigidbody2D>();
         var Direction = (iTarget.position - transform.position).normalized;
+        RB.AddForce(Direction * mForce, ForceMode2D.Impulse);
+        RB.AddTorque(mForce, ForceMode2D.Impulse);
+    }
+
+    private void shoot_straight(Transform iProjectile)
+    {
+        var RB = iProjectile.GetComponent<Rigidbody2D>();
+        var Direction = shoot_straight_direction.position;
+        Debug.DrawRay( transform.position, Direction * mForce, Color.red);
         RB.AddForce(Direction * mForce, ForceMode2D.Impulse);
         RB.AddTorque(mForce, ForceMode2D.Impulse);
     }
