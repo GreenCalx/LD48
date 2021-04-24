@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7233948957800382290, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
+      propertyPath: ship_internal_ray
+      value: 0.48
+      objectReference: {fileID: 0}
     - target: {fileID: 7233948957800382291, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
       propertyPath: m_RootOrder
       value: 0

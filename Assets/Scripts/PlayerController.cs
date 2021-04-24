@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public  int     ship_internal_ray   = 2;
+    public  float   ship_internal_ray   = 2;
     public  float   move_theta_step   = 0.1f;
     public  float   air_travel_time = 1f;
     public  Vector3 approx_epsilon = new Vector3(0.5f, 0.5f, 0f);
