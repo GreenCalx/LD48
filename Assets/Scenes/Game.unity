@@ -244,6 +244,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 2993763961737161713, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: action_cooldown
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993763961737161713, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: air_travel_time
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993763961737161713, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: move_theta_step
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389828034141722400, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389828034141722400, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7453507927073198262, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_Mass
       value: 0.0001

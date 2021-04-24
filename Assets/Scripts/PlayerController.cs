@@ -8,16 +8,26 @@ public class PlayerController : MonoBehaviour
     public  float   ship_internal_ray   = 2;
     public  float   move_theta_step   = 0.1f;
     public  float   air_travel_time = 1f;
+    public  float   action_cooldown = 0.2f;
     public  Vector3 approx_epsilon = new Vector3(0.5f, 0.5f, 0f);
     
     private float       curr_theta = 0;
     private bool        in_air = false;
     private Vector3     jump_destination;
+    private Vector3     jump_start_position;
     private float       dest_theta = 0f;
     private Vector3     jump_velocity = Vector3.zero;
     private bool        is_facing_right;
+    private float       cooldown_before_action = 0f;
     
     private ShipElemActivator  activator_in_range;
+
+    private bool mov_left;
+    private bool mov_right;
+    private bool jump;
+    private bool action;
+
+    private
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +35,26 @@ public class PlayerController : MonoBehaviour
         curr_theta = Random.Range (0, 2*Mathf.PI);
         is_facing_right = true;
         activator_in_range = null;
+        cooldown_before_action = 0f;
     }
 
     // Update is called once per frame
     void Update()
+    {
+
+        interprete_inputs();
+    }
+
+    void FixedUpdate()
+    {
+        jump = Input.GetKey("space");
+        mov_left = Input.GetKey("left") ;
+        mov_right = Input.GetKey("right");
+        action = Input.GetKey("down");
+
+    }
+
+    private void interprete_inputs()
     {
         if ( in_air )
         { // wait for travel
@@ -38,33 +64,36 @@ public class PlayerController : MonoBehaviour
         } else 
         { // control around circle
         
-            if (Input.GetKeyDown("space") )
-            {
-                tryJump();
-            }
-            if (Input.GetKey("left"))
+            if (mov_left)
             {
                 curr_theta -= move_theta_step;
 
                 if ( is_facing_right )
                     flip_sprite();
             }
-            if (Input.GetKey("right"))
+            if (mov_right)
             {
                 curr_theta += move_theta_step;
 
                 if (!is_facing_right)
                     flip_sprite();
             }
-            if (Input.GetKeyDown("down"))
+
+            if ( checkActionCD() )
             {
-                doAction();
+                if ( jump )
+                {
+                    tryJump();
+                }
+                else if (action)
+                {
+                    doAction();
+                }
             }
+
             
             updateGroundPosition();
         }      
-
-
     }
 
     public void set_activator_in_range(ShipElemActivator iActivator)
@@ -77,12 +106,26 @@ public class PlayerController : MonoBehaviour
         activator_in_range = null;
     }
 
+    private bool checkActionCD()
+    {
+        if ( cooldown_before_action < action_cooldown )
+        {
+            cooldown_before_action += Time.deltaTime;
+            Debug.Log("action CD");
+            return false;
+        }
+        return true;
+    }
+
     private void doAction()
     {
+
+
         // activate butn
         if (!!activator_in_range)
         {
             activator_in_range.toggle();
+            cooldown_before_action = 0f;
         }
     }
 
@@ -97,16 +140,16 @@ public class PlayerController : MonoBehaviour
 
     private void updateAirPosition()
     {
-        Vector3 point = Vector3.SmoothDamp( transform.localPosition, 
-                                            jump_destination, 
-                                            ref jump_velocity, 
-                                            air_travel_time);
+        Vector3 point = Vector3.Lerp( transform.localPosition, 
+                                      jump_destination, 
+                                      air_travel_time );
         transform.localPosition = point;
+
         if ( eq_approx_position( jump_destination, point, approx_epsilon) )
         { 
-            transform.localPosition = jump_destination;
-            in_air = false; 
             curr_theta = dest_theta; 
+            in_air = false;
+            updateGroundPosition();
         }
     }
 
@@ -114,9 +157,11 @@ public class PlayerController : MonoBehaviour
     {
         if ( iPos == iDest )
             return true;
-
+        //return false;
+        
         return System.Math.Abs(iPos.x - iDest.x) <= iEps.x &&
                System.Math.Abs(iPos.y - iDest.y) <= iEps.y;
+               
     }
 
     private void tryJump()
@@ -125,10 +170,13 @@ public class PlayerController : MonoBehaviour
         {
             in_air = true;
             dest_theta = curr_theta + Mathf.PI;
-            jump_destination = new Vector3  (   (ship_internal_ray * Mathf.Cos(dest_theta)), 
-                                                (ship_internal_ray * Mathf.Sin(dest_theta)), 
-                                                0
-                                            );
+
+            jump_start_position = transform.localPosition;
+            jump_destination    = new Vector3  (    (ship_internal_ray * Mathf.Cos(dest_theta)), 
+                                                    (ship_internal_ray * Mathf.Sin(dest_theta)), 
+                                                    0
+                                                );
+            //jump_destination += transform.localPosition;
         }
     }
 
