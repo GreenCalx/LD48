@@ -18,4 +18,19 @@ public class ShipElem : MonoBehaviour
     {
         
     }
+
+    public void DisplayElem(bool signal)
+    {
+        var Renderer = GetComponentInChildren<SpriteRenderer>();
+        Renderer.enabled = signal;
+
+        var Audio = GetComponentInChildren<AudioSource>();
+        if (signal)
+        {
+            if (!Audio.isPlaying)
+                Audio.Play();
+        }
+        else
+            Audio.Stop();
+    }
 }

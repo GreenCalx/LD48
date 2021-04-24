@@ -28,32 +28,17 @@ public class ThrusterBehavior : ShipElem
         }
     }
 
-    void DisplayThrust(bool True)
-    {
-        var Renderer = GetComponentInChildren<SpriteRenderer>();
-        Renderer.enabled = True;
-
-        var Audio = GetComponentInChildren<AudioSource>();
-        if (True)
-        {
-            if (!Audio.isPlaying)
-                Audio.Play();
-        }
-        else
-            Audio.Stop();
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
        if(mActivated)
         {
             AddThrust();
-            DisplayThrust(true);
+            DisplayElem(true);
         } 
        else
         {
-            DisplayThrust(false);
+            DisplayElem(false);
         }
     }
 }
