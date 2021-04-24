@@ -141,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6622476925067047157, guid: b93dee3be83716c48a5c7c3c0007d477, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.65
+      value: 7.58
       objectReference: {fileID: 0}
     - target: {fileID: 6622476925067047157, guid: b93dee3be83716c48a5c7c3c0007d477, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.97
       objectReference: {fileID: 0}
     - target: {fileID: 6622476925067047157, guid: b93dee3be83716c48a5c7c3c0007d477, type: 3}
       propertyPath: m_LocalPosition.z
@@ -244,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 2059109551811982641, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2993763961737161713, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: action_cooldown
       value: 0.2
@@ -255,6 +259,18 @@ PrefabInstance:
     - target: {fileID: 2993763961737161713, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: move_theta_step
       value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993763961737161715, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505294390821497435, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756416973401267433, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7389828034141722400, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_IsTrigger
