@@ -47,10 +47,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        jump = Input.GetKey("space");
+        jump = Input.GetKey("up");
         mov_left = Input.GetKey("left") ;
         mov_right = Input.GetKey("right");
-        action = Input.GetKey("down");
+        action = Input.GetKey("down") || Input.GetKey("space");
 
     }
 
