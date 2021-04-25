@@ -25,6 +25,7 @@ public class Timer {
     /// <summary>
     /// States
     /// </summary>
+    [SerializeField]
     private bool _AutoRestart = false;
     private bool _Ended = false;
     private enum States { eRunning, ePaused, eStopped };
