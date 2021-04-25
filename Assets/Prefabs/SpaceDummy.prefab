@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mIsTracked: 0
-  MAX_SPEED: 2
-  LOWEST_SPEED: 6
+  MAX_SPEED: 10
+  LOWEST_SPEED: 5
 --- !u!114 &4640433672367664276
 MonoBehaviour:
   m_ObjectHideFlags: 0

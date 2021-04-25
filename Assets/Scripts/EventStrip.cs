@@ -119,9 +119,9 @@ public class EventStrip : MonoBehaviour
         }
 
         // Should try to spawn below player in general
-        if ( worked_pos.y >= ship_pos.y )
+        if ( worked_pos.y >= (ship_pos.y-5) )
         {
-            worked_pos.y = ship_pos.y - 20;
+            worked_pos.y = ship_pos.y - 30;
         }
 
 

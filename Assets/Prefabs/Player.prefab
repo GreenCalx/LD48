@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship_internal_ray: 0.48
   move_theta_step: 0.05
-  air_travel_time: 2
+  air_travel_time: 0.1
   action_cooldown: 0.2
   approx_epsilon: {x: 0.05, y: 0.05, z: 0}
 --- !u!50 &3071445935218983957

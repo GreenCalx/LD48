@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mBattery: {fileID: 7377860273555567706}
+  mPowerUIrotation: {fileID: 0}
   mThrusters: []
   mShields: []
   mTurrets: []
