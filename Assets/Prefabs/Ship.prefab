@@ -426,7 +426,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c51cd3a2d4d88464aa6d411a1fd4c390, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -665,7 +665,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f38ed1f028e12bb44a566e02dfbd006f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d61098bca3b94c74cbc1020729b3071f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -677,7 +677,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 0.5
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1369,7 +1369,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: af3bc1effc37a7240b95b2c2f67e2433, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1381,7 +1381,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 0.2
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1496,7 +1496,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: af3bc1effc37a7240b95b2c2f67e2433, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1508,7 +1508,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.2
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -3550,7 +3550,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3bef5b7ca8940d046877f46a6d90b2ec, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3677,7 +3677,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f38ed1f028e12bb44a566e02dfbd006f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d61098bca3b94c74cbc1020729b3071f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3689,7 +3689,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.5
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -3885,9 +3885,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1120088387546842872}
     m_Modifications:
     - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
-      propertyPath: m_Volume
-      value: 0.23
+      propertyPath: m_Pitch
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c4d0067616b1734a806938441e1b28b, type: 3}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mParent
       value: 
@@ -3993,6 +4001,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1120088387546842872}
     m_Modifications:
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: Pan2D
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c4d0067616b1734a806938441e1b28b, type: 3}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mType
       value: 0
@@ -4228,6 +4252,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1120088387546842872}
     m_Modifications:
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: Pan2D
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c4d0067616b1734a806938441e1b28b, type: 3}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mType
       value: 1
