@@ -4192,7 +4192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233948957800382290, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
       propertyPath: air_travel_time
-      value: 0.01
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7233948957800382291, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
       propertyPath: m_RootOrder

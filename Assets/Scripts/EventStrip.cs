@@ -108,20 +108,20 @@ public class EventStrip : MonoBehaviour
         if ( Vector3.Distance( worked_pos, ship_pos) < safe_spawn_range )
         {
             worked_pos.x -= ( worked_pos.x > ship_pos.x ) ? worked_pos.x : (-1)*worked_pos.x;
-            worked_pos.y -= ( worked_pos.y > ship_pos.y ) ? worked_pos.y : (-1)*worked_pos.y;
+            worked_pos.y -= ( worked_pos.y > ship_pos.y ) ? worked_pos.y : 2*worked_pos.y;
         }
 
         // Shouldn't spawn too far from player
         if ( Vector3.Distance( worked_pos, ship_pos) > max_spawn_range )
         {
             worked_pos.x += ( worked_pos.x > ship_pos.x ) ? worked_pos.x : (-1)*worked_pos.x;
-            worked_pos.y += ( worked_pos.y > ship_pos.y ) ? worked_pos.y : (-1)*worked_pos.y;
+            worked_pos.y += ( worked_pos.y > ship_pos.y ) ? worked_pos.y : 2*worked_pos.y;
         }
 
         // Should try to spawn below player in general
-        if ( worked_pos.y > ship_pos.y )
+        if ( worked_pos.y >= ship_pos.y )
         {
-            worked_pos.y = ship_pos.y;
+            worked_pos.y = ship_pos.y - 20;
         }
 
 
