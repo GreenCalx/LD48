@@ -108,6 +108,17 @@ public class Timer {
         return _CurrentTime;
     }
     /// <summary>
+    /// Current time of the timer. Be careful zith this as you don't know when the update might be called and change this value.
+    /// </summary>
+    /// <returns>The current time between 0 and 1</returns>
+    public float GetTimeAsRatio()
+    {
+        if(_CurrentTime != 0)
+            return Mathf.Clamp( _EndTime / _CurrentTime, 0, 1);
+
+        return 0;
+    }
+    /// <summary>
     /// Length of the timer, meaning how much time before it is considered Ended and done
     /// </summary>
     /// <returns>The desired length of the timer</returns>
