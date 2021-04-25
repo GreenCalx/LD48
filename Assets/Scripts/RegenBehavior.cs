@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class RegenBehavior : MonoBehaviour
 {
     public Battery mBattery;
-    public Image regenPositive;
-    public Image regenNegative;
+    public Image regenPositiveImg;
+    public Image regenNegativeImg;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,6 @@ public class RegenBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Destroy(transform.GetChild(0).gameObject);
         MakeGraph();
     }
 
@@ -28,19 +27,17 @@ public class RegenBehavior : MonoBehaviour
 
         if (mRegen < 0)
         {
-            Image newWedge = Instantiate(regenNegative) as Image;
-            newWedge.transform.SetParent(transform, false);
-            newWedge.color = new Color(1, 1 + mRegen / 100, 0);
-            newWedge.fillAmount = -mRegen / 200;
-            newWedge.enabled = true;
+            regenPositiveImg.enabled = false;
+            regenNegativeImg.enabled = true;
+            regenNegativeImg.color = new Color(1, 1 + mRegen / 100, 0);
+            regenNegativeImg.fillAmount = -mRegen / 200;
         }
         else
         {
-            Image newWedge = Instantiate(regenPositive) as Image;
-            newWedge.transform.SetParent(transform, false);
-            newWedge.color = new Color(1 - mRegen / 100, 1, 0);
-            newWedge.fillAmount = mRegen / 200;
-            newWedge.enabled = true;
+            regenNegativeImg.enabled = false;
+            regenPositiveImg.enabled = true;
+            regenPositiveImg.color = new Color(1 - mRegen / 100, 1, 0);
+            regenPositiveImg.fillAmount = mRegen / 200;
         }
     }
 }

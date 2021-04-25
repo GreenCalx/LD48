@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnergyBehavior : MonoBehaviour
 {
     public Battery mBattery;
-    public Image energy;
+    public Image energyImg;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,6 @@ public class EnergyBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Destroy(transform.GetChild(0).gameObject);
         MakeGraph();
     }
 
@@ -25,17 +24,14 @@ public class EnergyBehavior : MonoBehaviour
     {
         float mEnergy = mBattery.mEnergy;
 
-        Image newWedge = Instantiate(energy) as Image;
-        newWedge.transform.SetParent(transform, false);
         if (mEnergy < 50)
         {
-            newWedge.color = new Color(1, mEnergy / 50, 0);
+            energyImg.color = new Color(1, mEnergy / 50, 0);
         }
         else
         {
-            newWedge.color = new Color((50 - mEnergy) / 50 + 1, 1, 0);
+            energyImg.color = new Color((50 - mEnergy) / 50 + 1, 1, 0);
         }
-        newWedge.transform.localScale = new Vector2(0.8f * mEnergy / 100, 0.8f * mEnergy / 100);
-        newWedge.enabled = true;
+        energyImg.transform.localScale = new Vector2(0.8f * mEnergy / 100, 0.8f * mEnergy / 100);
     }
 }
