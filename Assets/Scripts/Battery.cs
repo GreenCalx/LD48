@@ -7,6 +7,7 @@ public class Battery : MonoBehaviour
     public float mMax = 100;
     public float mEnergy = 100;
     public float mRegen = 0;
+    public float mConsumption = 0;
     public ShipElem[] mShipElems;
 
     void Set_regen(int regen)
@@ -31,6 +32,7 @@ public class Battery : MonoBehaviour
                 consumption += shipElem.mConsumption;
             }
         }
+        mConsumption = consumption;
 
         mEnergy += (mRegen - consumption) * Time.fixedDeltaTime;
 

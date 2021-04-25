@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidBehavior : MonoBehaviour
+public class AsteroidBehavior : EnemyBehaviour
 {
     public GameObject mFocusedObject;
     public float mForce;

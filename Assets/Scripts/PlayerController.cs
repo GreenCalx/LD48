@@ -106,6 +106,11 @@ public class PlayerController : MonoBehaviour
         activator_in_range = null;
     }
 
+    public bool has_activator_in_range()
+    {
+        return (activator_in_range!=null);
+    }
+
     private bool checkActionCD()
     {
         if ( cooldown_before_action < action_cooldown )
@@ -119,8 +124,6 @@ public class PlayerController : MonoBehaviour
 
     private void doAction()
     {
-
-
         // activate butn
         if (!!activator_in_range)
         {

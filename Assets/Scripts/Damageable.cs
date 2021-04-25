@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
-    public int mHealth;
+    public float mHealth;
     [SerializeField]
-    private int mCurrentHealth;
+    private float mCurrentHealth;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var CollisionDamager = collision.gameObject.GetComponent<Damager>();
-        if(CollisionDamager) {
-            HitMe(CollisionDamager.GetDamage());
-        }
+        ExecuteOnCollide(collision);
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    void HitMe(int Damage)
+    public void HitMe(float Damage)
     {
         mCurrentHealth -= Damage;
         if (mCurrentHealth <= 0) Die();
@@ -38,9 +37,28 @@ public class Damageable : MonoBehaviour
         GameObject.Destroy(this.gameObject);
     }
 
+    public void Regenerate(float life)
+    {
+        mCurrentHealth += life;
+        if (mCurrentHealth > mHealth)
+        {
+            mCurrentHealth = mHealth;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         
     }
+
+    public virtual void ExecuteOnCollide(Collision2D collision)
+    {
+        var CollisionDamager = collision.gameObject.GetComponent<Damager>();
+        if (CollisionDamager)
+        {
+            HitMe(CollisionDamager.GetDamage());
+        }
+    }
+
 }

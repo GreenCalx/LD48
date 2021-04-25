@@ -16,13 +16,17 @@ public class ShieldBehavior : ShipElem
     // Update is called once per frame
     void FixedUpdate()
     {
+        var hitbox = GetComponent<PolygonCollider2D>();
+
         if (mActivated)
         {
             DisplayElem(true);
+            hitbox.enabled = true;
         }
         else
         {
             DisplayElem(false);
+            hitbox.enabled = false;
         }
     }
 }
