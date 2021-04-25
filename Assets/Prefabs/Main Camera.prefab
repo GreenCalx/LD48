@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1986835003958664254}
   - component: {fileID: 1986835003958664253}
   - component: {fileID: 1986835003958664224}
+  - component: {fileID: 922585390}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -42,8 +43,8 @@ Camera:
   m_GameObject: {fileID: 1986835003958664252}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -97,3 +98,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mObjectToFollow: {fileID: 0}
+--- !u!114 &922585390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986835003958664252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ec80deb06f7a640925f9b641e66fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BackgroundT: {fileID: 2800000, guid: 2def45193b71a7b4199c8f4200be48cb, type: 3}
+  BackgroundRT: {fileID: 8400000, guid: 1ae3c28308b3f85448bbc155ad06ffeb, type: 2}
+  InfiniteBackgroundRenderer: {fileID: 2100000, guid: 9c914ef90475d6943b04abef2a167127, type: 2}
+  ResultRT: {fileID: 8400000, guid: f63afe40c334df240b4b30fff66f5d69, type: 2}
+  BlitMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
