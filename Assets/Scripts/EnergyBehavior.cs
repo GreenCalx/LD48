@@ -32,6 +32,6 @@ public class EnergyBehavior : MonoBehaviour
         {
             energyImg.color = new Color((50 - mEnergy) / 50 + 1, 1, 0);
         }
-        energyImg.transform.localScale = new Vector2(0.8f * mEnergy / 100, 0.8f * mEnergy / 100);
+        energyImg.transform.localScale = new Vector2(0.7f * mEnergy / 100, 0.7f * mEnergy / 100);
     }
 }
