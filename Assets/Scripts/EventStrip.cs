@@ -99,18 +99,20 @@ public class EventStrip : MonoBehaviour
     private void OnTriggerStay2D( Collider2D iCol )
     {
         PlayerController pc = iCol.GetComponent<PlayerController>();
-        if (!!pc)
+        if (!!pc && !strip_is_active)
         {
             strip_is_active = true;
+            Debug.Log("Entering event strip " + gameObject.name );
         }
     }
 
     private void OnTriggerExit2D( Collider2D iCol )
     {
         PlayerController pc = iCol.GetComponent<PlayerController>();
-        if (!!pc)
+        if (!!pc && strip_is_active)
         {
             strip_is_active = false;
+            Debug.Log("Exiting strip " + gameObject.name );
         }
     }
 
