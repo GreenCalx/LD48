@@ -21,6 +21,7 @@ public class ScanBehavior : ShipElem
     public Texture2D mTopLayout;
     public Material RotatedBlit;
     public float Speed;
+    public int DotSize;
     // Start is called before the first frame update
     void Start()
     {
@@ -88,7 +89,7 @@ public class ScanBehavior : ShipElem
         var Pixels = mImage.GetPixels32();
         for (int i = 0; i < Pixels.Length; ++i) Pixels[i] = new Color32(0, 0, 0, 0);
         var CurrentPositionCenteredInPixel = new Vector2(mImage.width / 2, mImage.height / 2);
-        PrintDot(Pixels, (int)CurrentPositionCenteredInPixel.x, (int)CurrentPositionCenteredInPixel.y, 3, new Color32(255, 0, 0, 255));
+        PrintDot(Pixels, (int)CurrentPositionCenteredInPixel.x, (int)CurrentPositionCenteredInPixel.y, DotSize, new Color32(255, 0, 0, 255));
         var PixelRatioX = mMaxRadius * 2 / mImage.width;
         var PixelRatioY = mMaxRadius * 2 / mImage.height;
 
@@ -98,13 +99,13 @@ public class ScanBehavior : ShipElem
             var DirectionInUnits = O.transform.position - transform.position;
             var PointCenterInPixel = new Vector2((CurrentPositionCenteredInPixel.x + (DirectionInUnits.x / PixelRatioX)),
                 (CurrentPositionCenteredInPixel.y + (DirectionInUnits.y / PixelRatioY)));
-            PrintDot(Pixels, (int)PointCenterInPixel.x, (int)PointCenterInPixel.y, 3, new Color32(255, 0, 0, 255));
+            PrintDot(Pixels, (int)PointCenterInPixel.x, (int)PointCenterInPixel.y, DotSize, new Color32(255, 0, 0, 255));
         }
         mImage.SetPixels32(Pixels);
         mImage.Apply(false);
         Graphics.Blit(mImage, RTFinal, Mat);
 
-        //RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.Rotate(Quaternion.Euler(0, 0, 90)));
+        RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.Rotate(Quaternion.Euler(0, 0, 90)));
         RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.TRS(new Vector3(0.5f,0.5f,0), Quaternion.Euler(0, 0, Time.time * -Speed), Vector3.one));
         RotatedBlit.SetMatrix("_MoveCenter", Matrix4x4.Translate(new Vector3(-0.5f, -0.5f, 0)));
         Graphics.Blit(mTopLayout, RTFinal, RotatedBlit);
