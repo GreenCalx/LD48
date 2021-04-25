@@ -16,6 +16,8 @@ public class ScanBehavior : ShipElem
     public GameObject[] mObjects;
     [SerializeField]
     public Material Mat;
+
+    public Canvas BlitTexture;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +68,13 @@ public class ScanBehavior : ShipElem
         //            Pixels[GetFlatIndex(i, j)] = new Color32(0, 0, 0, 255);
         //    }
         //}
+    }
+
+    public override void DisplayElem(bool T)
+    {
+        base.DisplayElem(T);
+
+        if (BlitTexture) BlitTexture.enabled = T;
     }
 
     void ResolveRadar()

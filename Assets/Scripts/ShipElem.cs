@@ -19,7 +19,7 @@ public class ShipElem : MonoBehaviour
         
     }
 
-    public void DisplayElem(bool signal)
+    public virtual void DisplayElem(bool signal)
     {
         var Renderer = GetComponentInChildren<SpriteRenderer>();
         Renderer.enabled = signal;
