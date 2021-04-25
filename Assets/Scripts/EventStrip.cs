@@ -15,6 +15,9 @@ public class EventStrip : MonoBehaviour
     [Range(MIN_MENACE, MAX_MENACE)]
     public int menace_density;
 
+    public float safe_spawn_range;
+    public float max_spawn_range;
+
     public GameObject refEventCollection;
     public GameObject refShip;
 
@@ -90,10 +93,39 @@ public class EventStrip : MonoBehaviour
                                         Random.Range(rectTransform.rect.yMin, rectTransform.rect.yMax),
                                         0) + rectTransform.transform.position;
         
-        GameObject new_menace = Instantiate(iPrefab, position, Quaternion.identity);
+        Vector3 spawn_position = adaptPosition( position );
+        
+        GameObject new_menace = Instantiate(iPrefab, spawn_position, Quaternion.identity);
+        
+    }
 
-        // Set direction towards player ? Init Menace behaviour accordingly?
+    private Vector3 adaptPosition( Vector3 iPos )
+    {
+        Vector3 worked_pos  = iPos;
+        Vector3 ship_pos    = refShip.transform.position;
 
+        // Shouldn't spawn on player
+        if ( Vector3.Distance( worked_pos, ship_pos) < safe_spawn_range )
+        {
+            worked_pos.x -= ( worked_pos.x > ship_pos.x ) ? worked_pos.x : (-1)*worked_pos.x;
+            worked_pos.y -= ( worked_pos.y > ship_pos.y ) ? worked_pos.y : (-1)*worked_pos.y;
+        }
+
+        // Shouldn't spawn too far from player
+        if ( Vector3.Distance( worked_pos, ship_pos) > max_spawn_range )
+        {
+            worked_pos.x += ( worked_pos.x > ship_pos.x ) ? worked_pos.x : (-1)*worked_pos.x;
+            worked_pos.y += ( worked_pos.y > ship_pos.y ) ? worked_pos.y : (-1)*worked_pos.y;
+        }
+
+        // Should try to spawn below player in general
+        if ( worked_pos.y > ship_pos.y )
+        {
+            worked_pos.y = ship_pos.y;
+        }
+
+
+        return worked_pos;
     }
 
     private void OnTriggerStay2D( Collider2D iCol )

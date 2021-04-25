@@ -40,7 +40,6 @@ public class SpaceDummy : EnemyBehaviour
         
     public override void init()
     {
-        Debug.Log("init space dummy !");
         smoothTime = Random.Range( LOWEST_SPEED, MAX_SPEED);
     }
 

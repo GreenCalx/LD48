@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
         mov_right = Input.GetKey("right");
         action = Input.GetKey("down") || Input.GetKey("space");
 
+        interprete_inputs();
+
     }
 
     private void interprete_inputs()
