@@ -16,9 +16,9 @@ public class ShipElemActivator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        update_color();
     }
 
     private void update_color()

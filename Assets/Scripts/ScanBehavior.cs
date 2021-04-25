@@ -13,7 +13,7 @@ public class ScanBehavior : ShipElem
 
     public RenderTexture RTFinal;
 
-    public GameObject[] mObjects;
+    public List<GameObject> mObjects;
     [SerializeField]
     public Material Mat;
 
@@ -22,6 +22,7 @@ public class ScanBehavior : ShipElem
     void Start()
     {
         mConsumption = 1;
+        mObjects = new List<GameObject>(0);
     }
 
     int GetFlatIndex(int x, int y)
@@ -89,6 +90,7 @@ public class ScanBehavior : ShipElem
         var PixelRatioX = mMaxRadius * 2 / mImage.width;
         var PixelRatioY = mMaxRadius * 2 / mImage.height;
 
+        mObjects.RemoveAll(item => item == null);
         foreach (GameObject O in mObjects)
         {
             var DirectionInUnits = O.transform.position - transform.position;
@@ -115,5 +117,12 @@ public class ScanBehavior : ShipElem
             DisplayElem(false);
         }
 
+    }
+
+    public void removeFromScan( GameObject iObj )
+    {
+        if (mObjects.Contains(iObj))
+            mObjects.Remove(iObj);
+        //mObjects.RemoveAll(item => item == null);
     }
 }
