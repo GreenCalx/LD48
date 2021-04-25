@@ -34,7 +34,7 @@ public class Missile : Damager
         if (death_called)
             return;
         death_called = true;
-        
+
         Destroy(this.gameObject);
     }
 }

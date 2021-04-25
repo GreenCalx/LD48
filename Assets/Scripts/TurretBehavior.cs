@@ -71,6 +71,7 @@ public class TurretBehavior : ShipElem
         if (!!d)
             tryReleaseTrack(d);
     }
+
     
     protected void trackEnemy(Damageable iCol)
     {

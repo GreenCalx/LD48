@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2234646101647803869}
   - component: {fileID: 1739532465438535553}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7911219024422974993}
   - component: {fileID: 6351274635278471343}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Scan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3963940456836075723}
   - component: {fileID: 5012733363305093721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4963773161974985153}
   - component: {fileID: 2072254356448738833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2884369365420709927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6773953489902294503}
   - component: {fileID: 8991421632287923342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193033791998730447}
   - component: {fileID: 4500266418566877263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1081,7 +1081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7660873885950480152}
   - component: {fileID: 2622103549144184788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4556852716244561251}
   - component: {fileID: 6071435352486792328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1245,7 +1245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2728984354703759776}
   - component: {fileID: 1950591861482251081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1372,7 +1372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115999929513424384}
   - component: {fileID: 1941784322845544580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099532829663859496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootingDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1528,7 +1528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1088781529888080599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1501924112417684157}
   - component: {fileID: 8331285380769277534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1755,7 +1755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8402559116275408999}
   - component: {fileID: 7007369343409368469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1840,7 +1840,7 @@ GameObject:
   - component: {fileID: 3768905956920887586}
   - component: {fileID: 2998786653146381919}
   - component: {fileID: 2958628261830376300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1939,7 @@ GameObject:
   - component: {fileID: 2493193511214985369}
   - component: {fileID: 4595846438728216207}
   - component: {fileID: 2760206858919408054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Turretport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2126,7 +2126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7422396273540546497}
   - component: {fileID: 4156669592193644421}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2209,7 +2209,7 @@ GameObject:
   - component: {fileID: 3897424652584110027}
   - component: {fileID: 8214945187033207511}
   - component: {fileID: 3262728330065540771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TurretStarbord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,7 +2399,7 @@ GameObject:
   - component: {fileID: 3201072447723143957}
   - component: {fileID: 5469834281091483989}
   - component: {fileID: 1089630428604152682}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShieldPort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2630,7 +2630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3631668300785918127}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootingDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2818,7 +2818,7 @@ GameObject:
   - component: {fileID: 5597206980658093552}
   - component: {fileID: 6160963133451022479}
   - component: {fileID: 7076158756069439915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShieldStarbord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2936,7 +2936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5217018726758135450}
   - component: {fileID: 1605347103347975432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Repair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3326,7 +3326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898366309716024573}
   - component: {fileID: 5137658218932023624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3453,7 +3453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5491632424419503823}
   - component: {fileID: 5927294360095395569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3641,9 +3641,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThursterForward
       objectReference: {fileID: 0}
+    - target: {fileID: 4183361446220097421, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6928985279733369245, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948098941171634150, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204766300228307476, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
@@ -3734,6 +3746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThursterClockwise
       objectReference: {fileID: 0}
+    - target: {fileID: 4183361446220097421, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6595148298817671827, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.467
@@ -3765,6 +3781,14 @@ PrefabInstance:
     - target: {fileID: 6928985279733369245, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948098941171634150, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204766300228307476, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
@@ -3913,6 +3937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThursterAnticlockwise
       objectReference: {fileID: 0}
+    - target: {fileID: 4183361446220097421, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6595148298817671827, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.209
@@ -3944,6 +3972,14 @@ PrefabInstance:
     - target: {fileID: 6928985279733369245, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948098941171634150, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204766300228307476, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
