@@ -18,6 +18,9 @@ public class ScanBehavior : ShipElem
     public Material Mat;
 
     public Canvas BlitTexture;
+    public Texture2D mTopLayout;
+    public Material RotatedBlit;
+    public float Speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +103,11 @@ public class ScanBehavior : ShipElem
         mImage.SetPixels32(Pixels);
         mImage.Apply(false);
         Graphics.Blit(mImage, RTFinal, Mat);
+
+        //RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.Rotate(Quaternion.Euler(0, 0, 90)));
+        RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.TRS(new Vector3(0.5f,0.5f,0), Quaternion.Euler(0, 0, Time.time * -Speed), Vector3.one));
+        RotatedBlit.SetMatrix("_MoveCenter", Matrix4x4.Translate(new Vector3(-0.5f, -0.5f, 0)));
+        Graphics.Blit(mTopLayout, RTFinal, RotatedBlit);
 
     }
 
