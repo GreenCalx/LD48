@@ -12,13 +12,15 @@ public class Damageable : MonoBehaviour
     {
         ExecuteOnCollide(collision);
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    void HitMe(float Damage)
+    public void HitMe(float Damage)
     {
         mCurrentHealth -= Damage;
         if (mCurrentHealth <= 0) Die();
@@ -58,4 +60,5 @@ public class Damageable : MonoBehaviour
             HitMe(CollisionDamager.GetDamage());
         }
     }
+
 }

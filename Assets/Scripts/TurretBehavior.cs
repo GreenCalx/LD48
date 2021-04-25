@@ -12,6 +12,7 @@ public class TurretBehavior : ShipElem
     public float mFireRate;
     
     public GameObject missile;
+    public GameObject guided_missile;
     public Transform shooting_point; //is child transform, could be retrieved
     public Transform shoot_straight_direction; //is child transform, could be retrieved
 
@@ -70,6 +71,7 @@ public class TurretBehavior : ShipElem
         if (!!d)
             tryReleaseTrack(d);
     }
+
     
     protected void trackEnemy(Damageable iCol)
     {
@@ -85,12 +87,7 @@ public class TurretBehavior : ShipElem
 
     protected void fire()
     {
-        GameObject invoked_go = Instantiate(missile);
-
-        Missile new_missile = invoked_go.GetComponent<Missile>();
-        invoked_missiles.Add(new_missile);
-
-        invoked_go.transform.position = transform.position;
+        GameObject invoked_go = null;
 
         // Try find a target
         if ( tracked_damageables.Count != 0 )
@@ -109,6 +106,12 @@ public class TurretBehavior : ShipElem
             if (target == null)
                 target = tracked_damageables[0];
 
+            // Invoke right Missile
+            invoked_go = Instantiate(guided_missile);
+    
+            GuidedMissile new_missile = invoked_go.GetComponent<GuidedMissile>();
+            invoked_missiles.Add(new_missile);
+    
             new_missile.target = target.transform;
             shoot_target(new_missile.transform, target.transform);
             Debug.Log("Shoot target-");
@@ -116,8 +119,15 @@ public class TurretBehavior : ShipElem
         } else {
             // Or shoot straight-y
             Debug.Log("Shoot straight-");
+
+            invoked_go = Instantiate(missile);
+            Missile new_missile = invoked_go.GetComponent<Missile>();
+            invoked_missiles.Add(new_missile);
             shoot_straight(new_missile.transform);
         }
+
+        // Set Missile position
+        invoked_go.transform.position = transform.position;
 
         // check if we need to autodestroy some missilez
         checkInvokedMissileSize();
