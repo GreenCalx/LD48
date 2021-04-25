@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6232365254093938606}
   - component: {fileID: -1796666747687318898}
   - component: {fileID: 1852075482934579644}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpaceDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,8 +15,8 @@ TagManager:
   - ShipElem
   - EventStrip
   - Player
-  - 
-  - 
+  - EnemyProjectiles
+  - Enemy
   - 
   - 
   - 
