@@ -114,11 +114,9 @@ public class TurretBehavior : ShipElem
     
             new_missile.target = target.transform;
             shoot_target(new_missile.transform, target.transform);
-            Debug.Log("Shoot target-");
 
         } else {
             // Or shoot straight-y
-            Debug.Log("Shoot straight-");
 
             invoked_go = Instantiate(missile);
             Missile new_missile = invoked_go.GetComponent<Missile>();
