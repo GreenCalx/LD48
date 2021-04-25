@@ -23,7 +23,6 @@ public class TurretBehavior : ShipElem
     // Start is called before the first frame update
     void Start()
     {
-        mConsumption = 1;
         invoked_missiles = new List<Missile>(0);
         tracked_damageables = new List<Damageable>(0);
     }

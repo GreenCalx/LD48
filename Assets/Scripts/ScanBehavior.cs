@@ -21,7 +21,6 @@ public class ScanBehavior : ShipElem
     // Start is called before the first frame update
     void Start()
     {
-        mConsumption = 1;
         mObjects = new List<GameObject>(0);
     }
 

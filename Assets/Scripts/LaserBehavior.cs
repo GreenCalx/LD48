@@ -11,8 +11,6 @@ public class LaserBehavior : ShipElem
     // Start is called before the first frame update
     void Start()
     {
-        mConsumption = 1;
-
         cc2d = GetComponent<CapsuleCollider2D>();
         cc2d.enabled = mActivated;
     }
