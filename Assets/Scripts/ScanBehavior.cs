@@ -24,7 +24,7 @@ public class ScanBehavior : ShipElem
 
     int GetFlatIndex(int x, int y)
     {
-        return (mImage.width * y + x);
+        return Mathf.Clamp(mImage.width * Mathf.Clamp(y, 0, mImage.width-1) + Mathf.Clamp(x, 0,mImage.height-1), 0, mImage.width * mImage.height);;
     }
 
     int GetFlatIndex(Vector2 Coordinates)
