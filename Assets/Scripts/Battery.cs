@@ -10,7 +10,7 @@ public class Battery : MonoBehaviour
     public float mConsumption = 0;
     public ShipElem[] mShipElems;
 
-    void Set_regen(int regen)
+    public void Set_regen(float regen)
     {
         mRegen = regen;
     }

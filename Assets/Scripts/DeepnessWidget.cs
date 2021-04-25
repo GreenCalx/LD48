@@ -6,8 +6,7 @@ using TMPro;
 public class DeepnessWidget : MonoBehaviour
 {
     public TextMeshProUGUI ValueText;
-    public GameObject EndMarker;
-    public GameObject Player;
+    public ShipBehavior Ship;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +16,7 @@ public class DeepnessWidget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var GrdDist = Player.transform.position.y - EndMarker.transform.position.y;
+        float GrdDist = Ship.GetDeepness();
         ValueText.text = GrdDist.ToString();
         
     }
