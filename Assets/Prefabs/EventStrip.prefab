@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threat_level: 0
   menace_density: 1
+  refEventCollection: {fileID: 0}
   event_cooldown: 0
 --- !u!61 &3852882993634968947
 BoxCollider2D:
@@ -57,7 +58,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.9469509, y: 1.7703862}
