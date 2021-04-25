@@ -8,6 +8,8 @@ public class ShipBehavior : MonoBehaviour
     //InputManager InputManager;
 
     public Battery mBattery;
+    public PowerUIrotation mPowerUIrotation;
+
     public ThrusterBehavior[] mThrusters;
     public ShieldBehavior[] mShields;
     public TurretBehavior[] mTurrets;
@@ -31,6 +33,9 @@ public class ShipBehavior : MonoBehaviour
         {
             damageable.Regenerate(mRepair.mLifePerFrame);
         }
+        var transform = GetComponent<Transform>();
+        float angle = transform.rotation.eulerAngles.z;
+        mPowerUIrotation.SetRotation(angle);
     }
 
     public void YOUDEAD()
