@@ -20,7 +20,7 @@ public class PowerUIrotation : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            child.eulerAngles = new Vector3(0f, 0f, angle);
+            child.eulerAngles = new Vector3(0f, 0f, angle + 90);
         }
     }
 }
