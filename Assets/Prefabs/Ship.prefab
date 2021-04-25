@@ -1065,12 +1065,18 @@ MonoBehaviour:
   mMax: 100
   mEnergy: 100
   mRegen: 100
+  mConsumption: 0
   mShipElems:
   - {fileID: 5179066862477818154}
   - {fileID: 919909651165950252}
   - {fileID: 1120088387842844780}
   - {fileID: 7056508639421340873}
   - {fileID: 7446904935341742567}
+  - {fileID: 6351274635278471343}
+  - {fileID: 1605347103347975432}
+  - {fileID: 5608192686090484475}
+  - {fileID: 4595846438728216207}
+  - {fileID: 8214945187033207511}
 --- !u!1 &4443086110686991716
 GameObject:
   m_ObjectHideFlags: 0
