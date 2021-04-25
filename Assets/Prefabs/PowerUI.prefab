@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3161022829620834605}
   - component: {fileID: 3161022829620834602}
   - component: {fileID: 3161022829620834603}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PowerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ Canvas:
   m_GameObject: {fileID: 3161022829620834600}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -66,7 +66,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3161022829620834602
 MonoBehaviour:

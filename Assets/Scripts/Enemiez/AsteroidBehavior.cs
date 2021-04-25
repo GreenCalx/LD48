@@ -21,7 +21,6 @@ public class AsteroidBehavior : EnemyBehaviour
 
     public override void init()
     {
-        Debug.Log("init asteroid !");
         mFocusedObject = mShipRef;
 
         var RB = GetComponent<Rigidbody2D>();

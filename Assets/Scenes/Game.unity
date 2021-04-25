@@ -1160,6 +1160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 2618121835973840327, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 532909511}
     - target: {fileID: 5999658478815429521, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_Camera
       value: 

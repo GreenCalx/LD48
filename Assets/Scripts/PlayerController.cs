@@ -41,8 +41,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        interprete_inputs();
     }
 
     void FixedUpdate()
@@ -51,6 +49,8 @@ public class PlayerController : MonoBehaviour
         mov_left = Input.GetKey("left") ;
         mov_right = Input.GetKey("right");
         action = Input.GetKey("down") || Input.GetKey("space");
+
+        interprete_inputs();
 
     }
 
