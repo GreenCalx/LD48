@@ -143,6 +143,7 @@ public class PlayerController : MonoBehaviour
 
     private void updateAirPosition()
     {
+                                                
         Vector3 point = Vector3.Lerp( transform.localPosition, 
                                       jump_destination, 
                                       air_travel_time );
@@ -179,6 +180,7 @@ public class PlayerController : MonoBehaviour
                                                     (ship_internal_ray * Mathf.Sin(dest_theta)), 
                                                     0
                                                 );
+            cooldown_before_action = 0f;
             //jump_destination += transform.localPosition;
         }
     }

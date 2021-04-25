@@ -4019,7 +4019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3071445935218983957, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3071445935218983957, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
       propertyPath: m_AngularDrag
