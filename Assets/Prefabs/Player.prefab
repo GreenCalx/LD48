@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7233948957800382290}
   - component: {fileID: 3071445935218983957}
   - component: {fileID: 3126108677547197315}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   ship_internal_ray: 0.48
   move_theta_step: 0.005
   air_travel_time: 0.4
+  action_cooldown: 0.2
   approx_epsilon: {x: 0.05, y: 0.05, z: 0}
 --- !u!50 &3071445935218983957
 Rigidbody2D:
