@@ -15,7 +15,7 @@ public class Escaper : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
         {
              SceneManager.LoadScene("MenuScene");
         }
