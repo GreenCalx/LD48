@@ -89,11 +89,11 @@ public class TurretBehavior : ShipElem
         GameObject invoked_go = null;
 
         // Try find a target
+        tracked_damageables.RemoveAll(item => item == null);
         if ( tracked_damageables.Count != 0 )
         {
             // Find target between targeted fucckers
             Damageable target = null;
-            tracked_damageables.RemoveAll(item => item == null);
             foreach( Damageable d in tracked_damageables )
             {
                 if (!d) continue;
