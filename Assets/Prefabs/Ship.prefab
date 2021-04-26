@@ -1388,7 +1388,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.1342793
+  m_Mass: 1.1342788
   m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 0.2
@@ -1427,6 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHealth: 100
   mCurrentHealth: 100
+  is_friendly: 1
 --- !u!212 &1414817258
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3365,6 +3366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDamage: 100
   mDamageTickRate: 0.2
+  is_friendly: 0
 --- !u!50 &2958628261830376300
 Rigidbody2D:
   serializedVersion: 4
@@ -4100,6 +4102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHealth: 0
   mCurrentHealth: 0
+  is_friendly: 0
 --- !u!50 &1089630428604152682
 Rigidbody2D:
   serializedVersion: 4
@@ -4571,6 +4574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHealth: 0
   mCurrentHealth: 0
+  is_friendly: 0
 --- !u!50 &7076158756069439915
 Rigidbody2D:
   serializedVersion: 4
