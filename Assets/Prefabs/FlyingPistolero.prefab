@@ -202,7 +202,7 @@ MonoBehaviour:
   min_dist_from_player: 3
   missile: {fileID: 8924994412492992005, guid: 76a89b286bdc6dd45a3d7638c3b856bf, type: 3}
   fire_rate: 1
-  force: 50
+  force: 15
   shooting_point: {fileID: 3897866948278586478}
   animator: {fileID: 8282633352772391831}
   renderer: {fileID: 4835735862286731041}

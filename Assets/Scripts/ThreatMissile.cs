@@ -25,7 +25,8 @@ public class ThreatMissile : Missile
             if (!!d)
                 d.HitMe(dmger.mDamage);
             explode();
-        } 
+        }
+
     }
 
     void OnTriggerStay2D(Collider2D iCol)
@@ -38,6 +39,12 @@ public class ThreatMissile : Missile
                 d.HitMe(dmger.mDamage);
             explode();
         } 
+        
+        if (  iCol.GetComponent<ShipBehavior>() )
+        {
+            Debug.Log("hit shield");
+            explode();
+        }
     }
 
 }

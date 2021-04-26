@@ -54,5 +54,11 @@ MonoBehaviour:
     menaceLevel: 2
   - invokable: {fileID: 9152487753468126999, guid: 5174fa69a4beac8498a90e97f99bc98e, type: 3}
     menaceLevel: 3
+  - invokable: {fileID: 6008409846304249643, guid: f6322536ac5c72a4c9c4f31e73731d13, type: 3}
+    menaceLevel: 3
   - invokable: {fileID: 7681990797808394889, guid: ab3b919c9901a9342bb93fde2fbdbb3d, type: 3}
     menaceLevel: 4
+  - invokable: {fileID: 4187643329525763103, guid: 37f86103aa3ecba43ad867b0981e4e5a, type: 3}
+    menaceLevel: 5
+  - invokable: {fileID: 8013717815642993175, guid: 5635d2af0c166224780a8befc8ea4af4, type: 3}
+    menaceLevel: 6
