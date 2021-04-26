@@ -52,6 +52,7 @@ public class ShipBehavior : MonoBehaviour
 
     public float GetDeepness()
     {
+        if (mPlayer == null || mEndMarker == null) return 0;
         return mPlayer.transform.position.y - mEndMarker.transform.position.y;
     }
 }

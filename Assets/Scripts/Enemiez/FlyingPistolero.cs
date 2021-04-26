@@ -18,6 +18,9 @@ public class FlyingPistolero : MonoBehaviour
 
     public Transform shooting_point;
 
+    public Animator animator;
+    public SpriteRenderer renderer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +35,9 @@ public class FlyingPistolero : MonoBehaviour
             if ( time_since_last_shot < fire_rate )
             {
                 time_since_last_shot += Time.deltaTime;
-            } else {
+                animator.SetBool("Shooting", false);
+            }
+            else {
                 fire(self_range.trackedShip.transform);
             }
 
@@ -47,6 +52,9 @@ public class FlyingPistolero : MonoBehaviour
             return;
 
         transform.position = Vector3.MoveTowards( transform.position, self_range.trackedShip.transform.position, max_step_for_follow);
+
+        if (transform.position.x >= self_range.trackedShip.transform.position.x) renderer.flipX = true;
+        else renderer.flipX = false;
     }
 
     private void fire( Transform iTarget )
@@ -54,6 +62,8 @@ public class FlyingPistolero : MonoBehaviour
         GameObject invoked_go = Instantiate(missile, transform.position, Quaternion.identity);
         shoot_player(invoked_go.transform, iTarget);
         time_since_last_shot = 0;
+
+        animator.SetBool("Shooting", true);
     }
 
     private void shoot_player(Transform iProjectile, Transform iTarget)
