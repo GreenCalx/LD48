@@ -26,7 +26,8 @@ public class ShipElemActivator : MonoBehaviour
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (!!sr)
         {
-            sr.color = (activated_obj.mActivated ? new Color(0,0.5f,0) : new Color(0.5f,0,0));
+            //sr.color = (activated_obj.mActivated ? new Color(0,0.5f,0) : new Color(0.5f,0,0));
+            sr.color = activated_obj.mActivated ? new Color(0.2f,0.5f,0.2f) : Color.white;
         }
     }
 
