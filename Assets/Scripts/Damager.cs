@@ -21,7 +21,7 @@ public class Damager : MonoBehaviour
             time_since_last_damage += Time.deltaTime;
             return 0f;
         } else {
-            time_since_last_damage = Time.deltaTime;
+            time_since_last_damage = 0f;
             return mDamage;
         }
 

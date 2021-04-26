@@ -13,6 +13,11 @@ public class Damageable : MonoBehaviour
         ExecuteOnCollide(collision);
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        ExecuteOnCollide(collision);
+    }
+
 
     // Start is called before the first frame update
     void Start()
