@@ -21,8 +21,11 @@ public class ShipElem : MonoBehaviour
 
     public virtual void DisplayElem(bool signal)
     {
-        var Renderer = GetComponentInChildren<SpriteRenderer>();
-        Renderer.enabled = signal;
+        var Renderers = GetComponentsInChildren<SpriteRenderer>();
+        if (Renderers.Length > 1)
+            Renderers[1].enabled = signal;
+        else
+            Renderers[0].enabled = signal;
 
         var Audio = GetComponentInChildren<AudioSource>();
         if (signal)

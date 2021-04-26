@@ -7,6 +7,7 @@ public class ThrusterBehavior : ShipElem
 {
     public ShipBehavior mParent;
     public Rigidbody2D mParentBody;
+    public Transform mContactPoint;
 
     public enum Type { Clockwise, Anticlockwise, Forward, Null };
     public Type mType = Type.Null;
@@ -23,7 +24,7 @@ public class ThrusterBehavior : ShipElem
     {
         if (mParentBody)
         {
-            mParentBody.AddForceAtPosition(transform.right * mForce, transform.position);
+            mParentBody.AddForceAtPosition(mContactPoint.right * mForce, mContactPoint.position);
         }
     }
 
