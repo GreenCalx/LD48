@@ -17,6 +17,7 @@ public class EventStrip : MonoBehaviour
 
     public float safe_spawn_range;
     public float max_spawn_range;
+    public float max_x_range;
 
     public GameObject refEventCollection;
     public GameObject refShip;
@@ -119,11 +120,16 @@ public class EventStrip : MonoBehaviour
         }
 
         // Should try to spawn below player in general
-        if ( worked_pos.y >= (ship_pos.y-5) )
+        if ( worked_pos.y >= (ship_pos.y-10) )
         {
-            worked_pos.y = ship_pos.y - 30;
+            worked_pos.y = ship_pos.y - 35;
         }
 
+        // If too far on X, make it closer
+        if ( Mathf.Abs(worked_pos.x - ship_pos.x) >= max_x_range )
+        {
+            worked_pos.x = ship_pos.x + max_x_range/4;
+        }
 
         return worked_pos;
     }

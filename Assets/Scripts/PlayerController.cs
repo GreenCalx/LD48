@@ -116,7 +116,6 @@ public class PlayerController : MonoBehaviour
         if ( cooldown_before_action < action_cooldown )
         {
             cooldown_before_action += Time.deltaTime;
-            Debug.Log("action CD");
             return false;
         }
         return true;
