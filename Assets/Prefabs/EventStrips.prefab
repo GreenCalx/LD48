@@ -132,7 +132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
@@ -253,11 +253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -374,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
@@ -737,11 +737,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -858,11 +858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -979,7 +979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
@@ -1100,11 +1100,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -1221,11 +1221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -1342,11 +1342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -1467,7 +1467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -1584,11 +1584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -1709,7 +1709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -1826,7 +1826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
@@ -2065,7 +2065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
@@ -2186,11 +2186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
@@ -2307,7 +2307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
@@ -2428,11 +2428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: threat_level
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: menace_density
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4561046558128544401, guid: 2c88209dc9a938d4b815a4525610d625, type: 3}
       propertyPath: max_spawn_range
