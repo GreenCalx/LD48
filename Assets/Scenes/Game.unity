@@ -304,30 +304,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5218085893984969914, guid: 0977a711c2d936140abcbcc59559153e, type: 3}
   m_PrefabInstance: {fileID: 1632085835}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &250107371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 105483910431505209, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
-  m_PrefabInstance: {fileID: 1120088388738895847}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &250107374
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250107371}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 59fba46e033fafe4a8450f3e25a8e124, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &331860402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,30 +1203,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0977a711c2d936140abcbcc59559153e, type: 3}
---- !u!1 &1668646758 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6002763504011048441, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
-  m_PrefabInstance: {fileID: 1120088388738895847}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1668646761
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668646758}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 59fba46e033fafe4a8450f3e25a8e124, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1674359411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2484296096690402716, guid: 86ee16e5ead5e9147ad6c217ca73bdf0, type: 3}
@@ -1644,18 +1596,6 @@ PrefabInstance:
     - target: {fileID: 1120088387546842874, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_Name
       value: Ship
-      objectReference: {fileID: 0}
-    - target: {fileID: 1501924112417684157, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.764
-      objectReference: {fileID: 0}
-    - target: {fileID: 2234646101647803869, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2234646101647803869, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.764
       objectReference: {fileID: 0}
     - target: {fileID: 2618121835973840327, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_Camera
