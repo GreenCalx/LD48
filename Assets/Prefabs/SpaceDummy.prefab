@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mIsTracked: 0
+  deletion_range: 100
   MAX_SPEED: 10
   LOWEST_SPEED: 5
 --- !u!114 &4640433672367664276
@@ -166,4 +167,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDamage: 5
-  mDamageTickRate: 0
+  mDamageTickRate: 1

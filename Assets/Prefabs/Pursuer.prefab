@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDamage: 15
-  mDamageTickRate: 0
+  mDamageTickRate: 1
 --- !u!114 &4549711091888715949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mIsTracked: 0
+  deletion_range: 100
   MAX_SPEED: 2
   LOWEST_SPEED: 6
   max_step_for_follow: 0.005
