@@ -1954,7 +1954,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0.5
+  Pan2D: -0.5
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -2667,7 +2667,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 790566014485656832, guid: 5f9126e9e9560f84298bc00a6b50e538, type: 2}
-  m_audioClip: {fileID: 8300000, guid: af3bc1effc37a7240b95b2c2f67e2433, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 497392bf89d4a784da0978e07adc1796, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2679,7 +2679,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0.2
+  Pan2D: -0.2
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -2845,7 +2845,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 790566014485656832, guid: 5f9126e9e9560f84298bc00a6b50e538, type: 2}
-  m_audioClip: {fileID: 8300000, guid: af3bc1effc37a7240b95b2c2f67e2433, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 497392bf89d4a784da0978e07adc1796, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2857,7 +2857,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: -0.2
+  Pan2D: 0.2
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -5375,7 +5375,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: -0.5
+  Pan2D: 0.5
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -5784,7 +5784,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: Pan2D
-      value: -0.2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: m_Pitch
@@ -6086,7 +6086,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: Pan2D
-      value: 0.2
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2087139872948106184, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: m_Pitch
