@@ -11,6 +11,8 @@ public class GuidedMissile : Missile
     // Start is called before the first frame update
     void Start()
     {
+        time_alive = 0f;
+
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (!!sr)
             sr.color = Color.yellow;
@@ -20,6 +22,10 @@ public class GuidedMissile : Missile
     void FixedUpdate()
     {
         chase_target();
+
+        time_alive += Time.deltaTime;
+        if ( time_alive >= lifespan )
+            explode();
     }
 
     public void chase_target()

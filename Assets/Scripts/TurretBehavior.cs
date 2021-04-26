@@ -93,6 +93,7 @@ public class TurretBehavior : ShipElem
         {
             // Find target between targeted fucckers
             Damageable target = null;
+            tracked_damageables.RemoveAll(item => item == null);
             foreach( Damageable d in tracked_damageables )
             {
                 if (!d) continue;
@@ -106,6 +107,8 @@ public class TurretBehavior : ShipElem
             // maybe get the closest?
             if (target == null)
                 target = tracked_damageables[0];
+            if (target == null)
+                return; // shouldn't happen..
 
             // Invoke right Missile
             invoked_go = Instantiate(guided_missile, shooting_point.transform.position, Quaternion.identity);
