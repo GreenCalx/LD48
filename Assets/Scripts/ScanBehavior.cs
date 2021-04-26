@@ -84,9 +84,18 @@ public class ScanBehavior : ShipElem
         Graphics.Blit(mLayout, RTFinal, Mat);
     }
 
-    public override void DisplayElem(bool T)
+    public override void DisplayElem(bool signal)
     {
-        if (BlitTexture) BlitTexture.enabled = T;
+        var Audio = GetComponentInChildren<AudioSource>();
+        if (signal)
+        {
+            if (!Audio.isPlaying)
+                Audio.Play();
+        }
+        else
+            Audio.Stop();
+
+        if (BlitTexture) BlitTexture.enabled = signal;
     }
 
     void ResolveRadar()
