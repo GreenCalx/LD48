@@ -69,7 +69,6 @@ public class Damageable : MonoBehaviour
 
         if ( CollisionDamager == null )
         {
-            Debug.LogError("  ExecuteOnCollide : Missing collision damager on target : " + collision.gameObject.name );
             return;
         }
 
