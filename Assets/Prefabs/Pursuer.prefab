@@ -163,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHealth: 10
   mCurrentHealth: 10
+  is_friendly: 0
 --- !u!70 &2670415242695698954
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -213,7 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDamage: 15
-  mDamageTickRate: 1
+  mDamageTickRate: 0
+  is_friendly: 0
 --- !u!114 &4549711091888715949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mIsTracked: 0
+  marked_sprite: {fileID: 0}
   deletion_range: 100
   MAX_SPEED: 2
   LOWEST_SPEED: 6

@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHealth: 10
   mCurrentHealth: 10
+  is_friendly: 0
 --- !u!70 &6232365254093938606
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,4 +169,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDamage: 5
-  mDamageTickRate: 1
+  mDamageTickRate: 0
+  is_friendly: 0

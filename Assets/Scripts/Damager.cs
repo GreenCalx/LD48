@@ -8,6 +8,8 @@ public class Damager : MonoBehaviour
     public float mDamageTickRate;
     private float time_since_last_damage = 0f;
 
+    public bool is_friendly = false;
+
     // Start is called before the first frame update
     void Start()
     {

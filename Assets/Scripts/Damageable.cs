@@ -7,6 +7,7 @@ public class Damageable : MonoBehaviour
     public float mHealth;
     [SerializeField]
     private float mCurrentHealth;
+    public bool is_friendly = false;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -65,6 +66,11 @@ public class Damageable : MonoBehaviour
     public virtual void ExecuteOnCollide(Collision2D collision)
     {
         var CollisionDamager = collision.gameObject.GetComponent<Damager>();
+
+        // friendly vs friendly or enemy vs enemy
+        if ( CollisionDamager.is_friendly == is_friendly)
+            return;
+
         if (CollisionDamager)
         {
             HitMe(CollisionDamager.GetDamage());

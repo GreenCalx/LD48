@@ -43,7 +43,7 @@ public class SpaceDummy : EnemyBehaviour
         smoothTime = Random.Range( LOWEST_SPEED, MAX_SPEED);
     }
 
-    void OnCollisionEnter2D( Collision2D iCol )
+    void OnCollisionStay2D( Collision2D iCol )
     {
         if (iCol.gameObject.GetComponent<ShipBehavior>())
         {
