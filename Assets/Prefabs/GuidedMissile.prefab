@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDamage: 10
   mDamageTickRate: 0
+  is_friendly: 1
   target: {fileID: 0}
   smoothTime: 0.01
   max_speed: 20
