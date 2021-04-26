@@ -29,7 +29,7 @@ public class BackgroundDisplay : MonoBehaviour
         InfiniteBackgroundRenderer.SetVector("_UvShift", this.transform.position * 0.04f);
 
 
-        InfiniteBackgroundRenderer.SetColor("_Color", G.Evaluate(1-ship.GetDeepness01()));
+        InfiniteBackgroundRenderer.SetColor("_Color", G.Evaluate(ship.GetDeepness01()));
         Graphics.Blit(BackgroundT, (RenderTexture)null, InfiniteBackgroundRenderer);
     }
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

@@ -51,7 +51,7 @@ public class ScanBehavior : ShipElem
         float size_y = (float)GaussianDistanceRadiusInPixel / mImage.height;
 
         if (!IsArrow)
-            Mat.SetTexture("_MainTex", mEnnemieSprite);
+            RotatedBlit.SetTexture("_MainTex", mEnnemieSprite);
         else
             RotatedBlit.SetTexture("_MainTex", mEnnemiesOOBSprite);
 
@@ -60,13 +60,16 @@ public class ScanBehavior : ShipElem
         // activate the first shader pass (in this case we know it is the only pass)
         if(!IsArrow)
         {
-            Mat.SetPass(0);
+            RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.identity);
+            RotatedBlit.SetMatrix("_MoveCenter", Matrix4x4.identity);
+            RotatedBlit.SetPass(0);
         }
         else
         {
 
             var rotationAngle = Vector3.SignedAngle(new Vector3(x_ClipSpace, y_ClipSpace, 0) - new Vector3(0.5f, 0.5f, 0), new Vector3(0,1,0), new Vector3(0,0,1));
             RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.TRS(new Vector3(0.5f,0.5f,0), Quaternion.Euler(0, 0, rotationAngle - 180), Vector3.one));
+            RotatedBlit.SetMatrix("_MoveCenter", Matrix4x4.Translate(new Vector3(-0.5f, -0.5f, 0)));
             RotatedBlit.SetPass(0);
         }
         // draw a quad over whole screen
@@ -81,7 +84,24 @@ public class ScanBehavior : ShipElem
 
     void PrintLayout()
     {
-        Graphics.Blit(mLayout, RTFinal, Mat);
+        //Graphics.Blit(mLayout, RTFinal, Mat);
+        // draw a quad over whole screen
+        GL.PushMatrix();
+        GL.LoadOrtho();
+
+        RotatedBlit.SetTexture("_MainTex", mLayout);
+        RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.identity);
+        RotatedBlit.SetMatrix("_MoveCenter", Matrix4x4.identity);
+        RotatedBlit.SetPass(0);
+
+        GL.Begin(GL.QUADS);
+        GL.TexCoord2(0f, 0f); GL.Vertex3(0f, 0f, 0f);    
+        GL.TexCoord2(0f, 1f); GL.Vertex3(0f, 1f, 0f);
+        GL.TexCoord2(1f, 1f); GL.Vertex3(1f, 1f, 0f);
+        GL.TexCoord2(1f, 0f); GL.Vertex3(1f, 0f, 0f);
+        GL.End();
+        GL.PopMatrix();
+
     }
 
     public override void DisplayElem(bool signal)
@@ -101,6 +121,8 @@ public class ScanBehavior : ShipElem
     void ResolveRadar()
     {
         // Print global layout
+        var originalRT = RenderTexture.active;
+        RenderTexture.active = RTFinal;
         PrintLayout();
         // Print center point as self
         var CurrentPositionCenteredInPixel = new Vector2(mImage.width / 2, mImage.height / 2);
@@ -120,6 +142,8 @@ public class ScanBehavior : ShipElem
         RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.TRS(new Vector3(0.5f,0.5f,0), Quaternion.Euler(0, 0, Time.time * -Speed), Vector3.one));
         RotatedBlit.SetMatrix("_MoveCenter", Matrix4x4.Translate(new Vector3(-0.5f, -0.5f, 0)));
         Graphics.Blit(mTopLayout, RTFinal, RotatedBlit);
+
+        RenderTexture.active = originalRT;
     }
 
     private void FixedUpdate()

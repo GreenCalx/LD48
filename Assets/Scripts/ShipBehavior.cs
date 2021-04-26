@@ -42,7 +42,7 @@ public class ShipBehavior : MonoBehaviour
         float angle = transform.rotation.eulerAngles.z;
         mPowerUIrotation.SetRotation(angle);
 
-        mBattery.Set_regen(100 * GetDeepness() / mStartDeepness);
+        mBattery.Set_regen(100 * GetDeepness01());
     }
 
     public void YOUDEAD()
@@ -57,6 +57,7 @@ public class ShipBehavior : MonoBehaviour
     }
      public float GetDeepness01()
     {
-        return GetDeepness() / mEndMarker.transform.position.y;
+        if (mStartDeepness == 0) return 0;
+        return Mathf.Clamp01(GetDeepness() / mStartDeepness);
     }
 }
