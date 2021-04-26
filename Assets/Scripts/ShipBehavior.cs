@@ -35,7 +35,7 @@ public class ShipBehavior : MonoBehaviour
         var damageable = GetComponent<Damageable>();
         if (mRepair.mActivated)
         {
-            damageable.Regenerate(mRepair.mLifePerFrame);
+            damageable.Regenerate(mRepair.mLifePerFrame * Time.fixedDeltaTime);
         }
 
         var transform = GetComponent<Transform>();

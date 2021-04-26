@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDamage: 10
   mDamageTickRate: 0
+  is_friendly: 1
   target: {fileID: 0}
 --- !u!58 &8446414559689144039
 CircleCollider2D:
