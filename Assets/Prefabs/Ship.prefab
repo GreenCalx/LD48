@@ -508,7 +508,8 @@ MonoBehaviour:
   mTopLayout: {fileID: 2800000, guid: b4cdecfb2d4a37d41a62d9d3e5e8a75f, type: 3}
   RotatedBlit: {fileID: 2100000, guid: 937af13ec9ebf2f428fed31cddbed658, type: 2}
   Speed: 300
-  DotSize: 3
+  DotSize: 10
+  mEnnemieSprite: {fileID: 2800000, guid: 70f3660b2b09a5749a2dfdd5949e8fa0, type: 3}
 --- !u!1 &1708276785588934905
 GameObject:
   m_ObjectHideFlags: 0

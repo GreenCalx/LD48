@@ -22,6 +22,7 @@ public class ScanBehavior : ShipElem
     public Material RotatedBlit;
     public float Speed;
     public int DotSize;
+    public Texture2D mEnnemieSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,40 +39,32 @@ public class ScanBehavior : ShipElem
         return Mathf.Clamp(GetFlatIndex((int)Coordinates.x,(int)Coordinates.y), 0, mImage.width * mImage.height);
     }
 
-    void PrintDot(Color32[] Pixels, int x, int y, int GaussianDistanceRadiusInPixel, Color32 Color)
+    void PrintDot(int x, int y, int GaussianDistanceRadiusInPixel, Color32 Color)
     {
-        Pixels[GetFlatIndex(x, y)] = Color;
-        for(int i = x - GaussianDistanceRadiusInPixel; i < x+ GaussianDistanceRadiusInPixel; ++i)
-        {
-            for(int j = y - GaussianDistanceRadiusInPixel; j < y + GaussianDistanceRadiusInPixel; ++j)
-            {
-                if(Vector2.Distance(new Vector2(x,y), new Vector2(i,j)) <= GaussianDistanceRadiusInPixel)
-                {
+        float x_ClipSpace = (float)x / mImage.width;
+        float y_ClipSpace = (float)y / mImage.height;
 
-                    Pixels[GetFlatIndex(i, j)] = Color;
+        float size_x = (float)GaussianDistanceRadiusInPixel / mImage.width;
+        float size_y = (float)GaussianDistanceRadiusInPixel / mImage.height;
 
-                }
-            }
-        }
+        Mat.SetTexture("_MainTex", mEnnemieSprite);
+        GL.PushMatrix();
+        GL.LoadOrtho();
+        // activate the first shader pass (in this case we know it is the only pass)
+        Mat.SetPass(0);
+        // draw a quad over whole screen
+        GL.Begin(GL.QUADS);
+        GL.TexCoord2(0f, 0f); GL.Vertex3(x_ClipSpace - size_x, y_ClipSpace - size_y, 0f);    
+        GL.TexCoord2(0f, 1f); GL.Vertex3(x_ClipSpace - size_x, y_ClipSpace + size_y, 0f);
+        GL.TexCoord2(1f, 1f); GL.Vertex3(x_ClipSpace + size_x, y_ClipSpace + size_y, 0f);
+        GL.TexCoord2(1f, 0f); GL.Vertex3(x_ClipSpace + size_x, y_ClipSpace - size_y, 0f);
+        GL.End();
+        GL.PopMatrix();
     }
 
-    void PrintLayout(Color32[] Pixels)
+    void PrintLayout()
     {
-
-        //var PixelRatioX = mMaxRadius * 2 / mImage.width;
-        //var PixelRatioY = mMaxRadius * 2 / mImage.height;
-
-        //for (int i = 0; i < mImage.width; ++i)
-        //{
-        //    for (int j = 0; j < mImage.height; ++j)
-        //    {
-        //        //var DistanceToCenter = Vector3.Distance(new Vector3(PixelRatioX * i, PixelRatioY * j), transform.position);
-        //        //if (Mathf.Round(DistanceToCenter) % 2 == 0)
-        //        //    Pixels[GetFlatIndex(i, j)] = new Color32(255, 255, 255, 255);
-        //        //else
-        //            Pixels[GetFlatIndex(i, j)] = new Color32(0, 0, 0, 255);
-        //    }
-        //}
+        Graphics.Blit(mLayout, RTFinal, Mat);
     }
 
     public override void DisplayElem(bool T)
@@ -83,33 +76,27 @@ public class ScanBehavior : ShipElem
 
     void ResolveRadar()
     {
-        // NOTE mtn5 : Seems to be a perf bottleneck
-
-        Graphics.Blit(mLayout, RTFinal, Mat);
-        var Pixels = mImage.GetPixels32();
-        for (int i = 0; i < Pixels.Length; ++i) Pixels[i] = new Color32(0, 0, 0, 0);
+        // Print global layout
+        PrintLayout();
+        // Print center point as self
         var CurrentPositionCenteredInPixel = new Vector2(mImage.width / 2, mImage.height / 2);
-        PrintDot(Pixels, (int)CurrentPositionCenteredInPixel.x, (int)CurrentPositionCenteredInPixel.y, DotSize, new Color32(255, 0, 0, 255));
+        PrintDot((int)CurrentPositionCenteredInPixel.x, (int)CurrentPositionCenteredInPixel.y, DotSize, new Color32(255, 0, 0, 255));
+        // Print Ennemies point
         var PixelRatioX = mMaxRadius * 2 / mImage.width;
         var PixelRatioY = mMaxRadius * 2 / mImage.height;
-
         mObjects.RemoveAll(item => item == null);
         foreach (GameObject O in mObjects)
         {
             var DirectionInUnits = O.transform.position - transform.position;
             var PointCenterInPixel = new Vector2((CurrentPositionCenteredInPixel.x + (DirectionInUnits.x / PixelRatioX)),
                 (CurrentPositionCenteredInPixel.y + (DirectionInUnits.y / PixelRatioY)));
-            PrintDot(Pixels, (int)PointCenterInPixel.x, (int)PointCenterInPixel.y, DotSize, new Color32(255, 0, 0, 255));
+            PrintDot( (int)PointCenterInPixel.x, (int)PointCenterInPixel.y, DotSize, new Color32(255, 0, 0, 255));
         }
-        mImage.SetPixels32(Pixels);
-        mImage.Apply(false);
-        Graphics.Blit(mImage, RTFinal, Mat);
-
+        // Print Sonar scan
         RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.Rotate(Quaternion.Euler(0, 0, 90)));
         RotatedBlit.SetMatrix("_RotationMatrix", Matrix4x4.TRS(new Vector3(0.5f,0.5f,0), Quaternion.Euler(0, 0, Time.time * -Speed), Vector3.one));
         RotatedBlit.SetMatrix("_MoveCenter", Matrix4x4.Translate(new Vector3(-0.5f, -0.5f, 0)));
         Graphics.Blit(mTopLayout, RTFinal, RotatedBlit);
-
     }
 
     private void FixedUpdate()
