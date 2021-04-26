@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5060263648473248125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3897866948278586478}
+  m_Layer: 11
+  m_Name: ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3897866948278586478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5060263648473248125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5754330550213297110}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5754330550213297111
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +45,7 @@ GameObject:
   - component: {fileID: 5113802228563069494}
   - component: {fileID: 4059134980109603076}
   - component: {fileID: 4662455286562992223}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FlyingPistolero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +64,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5234102568859487184}
+  - {fileID: 3897866948278586478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -165,8 +196,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837ce27a39b1fe44dae4a42cb208b08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow_player: 0
+  should_follow_player: 1
+  max_step_for_follow: 0.01
+  min_dist_from_player: 3
   missile: {fileID: 8924994412492992005, guid: 76a89b286bdc6dd45a3d7638c3b856bf, type: 3}
+  fire_rate: 1
+  force: 50
+  shooting_point: {fileID: 3897866948278586478}
 --- !u!1 &8730698784590925834
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +214,7 @@ GameObject:
   - component: {fileID: 5234102568859487184}
   - component: {fileID: 1351334810318327721}
   - component: {fileID: 353928625764458787}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShootingRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,3 +263,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1138757d40b683448515bdc4cc5985a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackedShip: {fileID: 0}

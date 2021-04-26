@@ -9,6 +9,8 @@ public class ShipBehavior : MonoBehaviour
 
     public Battery mBattery;
     public PowerUIrotation mPowerUIrotation;
+    public GameObject mEndMarker;
+    public GameObject mPlayer;
 
     public ThrusterBehavior[] mThrusters;
     public ShieldBehavior[] mShields;
@@ -17,12 +19,14 @@ public class ShipBehavior : MonoBehaviour
     public LaserBehavior mLaser;
     public RepairBehavior mRepair;
 
+    private float mStartDeepness;
+
     // World ref for gravity and ennmies?
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        mStartDeepness = GetDeepness();
     }
 
     // Update is called once per frame
@@ -33,13 +37,21 @@ public class ShipBehavior : MonoBehaviour
         {
             damageable.Regenerate(mRepair.mLifePerFrame);
         }
+
         var transform = GetComponent<Transform>();
         float angle = transform.rotation.eulerAngles.z;
         mPowerUIrotation.SetRotation(angle);
+
+        mBattery.Set_regen(100 * GetDeepness() / mStartDeepness);
     }
 
     public void YOUDEAD()
     {
         SceneManager.LoadScene("DeathScreen");
+    }
+
+    public float GetDeepness()
+    {
+        return mPlayer.transform.position.y - mEndMarker.transform.position.y;
     }
 }

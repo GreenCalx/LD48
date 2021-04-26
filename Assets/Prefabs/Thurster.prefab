@@ -50,7 +50,7 @@ MonoBehaviour:
   mParent: {fileID: 0}
   mParentBody: {fileID: 0}
   mType: 2
-  mForce: 1
+  mForce: 1.2
 --- !u!1 &6948098941171634150
 GameObject:
   m_ObjectHideFlags: 0

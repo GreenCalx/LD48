@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7681990797808394889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4612558214304169768}
+  m_Layer: 0
+  m_Name: ThreeFlyingPistolero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4612558214304169768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681990797808394889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.62774676, y: 3.177, z: -2.5569172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7751968747758182525}
+  - {fileID: 5418011411216433619}
+  - {fileID: 7453855411742469956}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &354616182394176005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4612558214304169768}
+    m_Modifications:
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.44049302
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297111, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_Name
+      value: FlyingPistolero (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+--- !u!4 &5418011411216433619 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+  m_PrefabInstance: {fileID: 354616182394176005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2616586594306106283
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4612558214304169768}
+    m_Modifications:
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4701514
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5055131
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.44049302
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297111, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_Name
+      value: FlyingPistolero
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+--- !u!4 &7751968747758182525 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+  m_PrefabInstance: {fileID: 2616586594306106283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2930179955065891986
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4612558214304169768}
+    m_Modifications:
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.44049302
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754330550213297111, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+      propertyPath: m_Name
+      value: FlyingPistolero (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+--- !u!4 &7453855411742469956 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5754330550213297110, guid: 35a7b3e723a8cca4a888ac363c2a56b8, type: 3}
+  m_PrefabInstance: {fileID: 2930179955065891986}
+  m_PrefabAsset: {fileID: 0}
