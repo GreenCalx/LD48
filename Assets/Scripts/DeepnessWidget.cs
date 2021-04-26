@@ -17,7 +17,6 @@ public class DeepnessWidget : MonoBehaviour
     void Update()
     {
         float GrdDist = Ship.GetDeepness();
-        ValueText.text = GrdDist.ToString();
-        
+        ValueText.text = ((int)(GrdDist)).ToString();
     }
 }

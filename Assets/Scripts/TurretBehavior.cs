@@ -95,6 +95,8 @@ public class TurretBehavior : ShipElem
             Damageable target = null;
             foreach( Damageable d in tracked_damageables )
             {
+                if (!d) continue;
+
                 EnemyBehaviour eb = d.gameObject.GetComponent<EnemyBehaviour>();
                 if ( eb && !eb.mIsTracked)
                 { target = d; break; }

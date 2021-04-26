@@ -51,6 +51,11 @@ public class Damageable : MonoBehaviour
         }
     }
 
+     public float GetCurrentHealth01()
+    {
+        return mCurrentHealth / mHealth;
+    }
+
     // Update is called once per frame
     void Update()
     {
