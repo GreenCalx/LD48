@@ -5,6 +5,7 @@ using UnityEngine;
 public class GuidedMissile : Missile
 {
     public float    smoothTime  = 0.3f;
+    public float    max_speed = 2f;
     private Vector3 velocity    = Vector3.zero;
     
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class GuidedMissile : Missile
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         chase_target();
     }
@@ -28,7 +29,8 @@ public class GuidedMissile : Missile
             transform.position = Vector3.SmoothDamp(    transform.position, 
                                                         target.position, 
                                                         ref velocity, 
-                                                        smoothTime );
+                                                        smoothTime,
+                                                        max_speed );
         }
     }
 }
