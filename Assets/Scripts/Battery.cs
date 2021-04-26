@@ -12,6 +12,11 @@ public class Battery : MonoBehaviour
 
     public void Set_regen(float regen)
     {
+        if (float.IsNaN(regen))
+        {
+            Debug.Log(regen);
+            return;
+        }
         mRegen = regen;
     }
     

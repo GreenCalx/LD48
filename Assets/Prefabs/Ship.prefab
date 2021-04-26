@@ -1242,7 +1242,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 7b3cff47d7ea7ea4f946815876aca9b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2736,7 +2736,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: f244a7fdcd531c84dbd3d14bb91052b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5846,6 +5846,10 @@ PrefabInstance:
     - target: {fileID: 3071445935218983957, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126108677547197315, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
+      propertyPath: m_Radius
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 3126108677547197315, guid: ba04b570881ff60418d2e10be0da6582, type: 3}
       propertyPath: m_IsTrigger
