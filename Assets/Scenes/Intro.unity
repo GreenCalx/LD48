@@ -590,8 +590,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.36, y: 181.9}
-  m_SizeDelta: {x: 583.33, y: 83.3}
+  m_AnchoredPosition: {x: 4.36, y: 169.81}
+  m_SizeDelta: {x: 583.33, y: 107.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814398002
 MonoBehaviour:
@@ -629,7 +629,14 @@ MonoBehaviour:
   m_Text: 'I''ve been sent to TrES-4b to reach a newborn civilization.
 
     As a
-    Watcher, it is my job to operate the Great Census.'
+    Watcher, it is my job to operate the Great Census.
+
+
+    My sensors indicate
+    a strong gravity and dense atmophere.
+
+    My solar panel powered core might
+    not keep up.'
 --- !u!222 &1814398003
 CanvasRenderer:
   m_ObjectHideFlags: 0
