@@ -7,6 +7,8 @@ public class MenuCallbacks : MonoBehaviour
 {
     public Canvas Menu;
 
+    public Canvas Help;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Intro");
@@ -16,10 +18,17 @@ public class MenuCallbacks : MonoBehaviour
     {
         Menu.enabled = true;
     }
+
+    public void StartHelp()
+    {
+        Help.enabled = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         Menu.enabled = false;
+        Help.enabled = false;
     }
 
     // Update is called once per frame
@@ -30,11 +39,12 @@ public class MenuCallbacks : MonoBehaviour
             StartGame();
         }
 
-        if(Menu.enabled)
+        if(Menu.enabled || Help.enabled)
         {
             if(Input.anyKey)
             {
                 Menu.enabled = false;
+                Help.enabled = false;
             }
         }
         
