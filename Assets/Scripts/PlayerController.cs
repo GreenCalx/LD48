@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //curr_theta = Random.Range (0, 2*Mathf.PI);
-        curr_theta = Mathf.PI;
+        curr_theta = 0; //Mathf.PI;
         is_facing_right = true;
         activator_in_range = null;
         cooldown_before_action = 0f;
