@@ -510,6 +510,7 @@ MonoBehaviour:
   Speed: 300
   DotSize: 10
   mEnnemieSprite: {fileID: 2800000, guid: 70f3660b2b09a5749a2dfdd5949e8fa0, type: 3}
+  mEnnemiesOOBSprite: {fileID: 2800000, guid: 555cee13fe6418a4da1d032ead0e37a3, type: 3}
 --- !u!1 &1708276785588934905
 GameObject:
   m_ObjectHideFlags: 0
