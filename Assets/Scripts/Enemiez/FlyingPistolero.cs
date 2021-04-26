@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingPistolero : MonoBehaviour
+public class FlyingPistolero : EnemyBehaviour
 {
 
     public bool should_follow_player = false;
@@ -15,6 +15,7 @@ public class FlyingPistolero : MonoBehaviour
 
     private EnemyShootingRange self_range;
     protected float time_since_last_shot;
+    private bool hasSpoke = false;
 
     public Transform shooting_point;
 
@@ -32,6 +33,13 @@ public class FlyingPistolero : MonoBehaviour
     {
         if ( !!self_range && self_range.hasTrackedShip() )
         {
+            if (!hasSpoke)
+            {
+                hasSpoke = true;
+                AudioSource audio = GetComponent<AudioSource>();
+                audio.Play();
+            }
+
             if ( time_since_last_shot < fire_rate )
             {
                 time_since_last_shot += Time.deltaTime;
