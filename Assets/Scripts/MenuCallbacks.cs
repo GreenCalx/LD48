@@ -25,6 +25,11 @@ public class MenuCallbacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("space"))
+        {
+            StartGame();
+        }
+
         if(Menu.enabled)
         {
             if(Input.anyKey)
