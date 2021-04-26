@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1698854345}
   - component: {fileID: 1698854346}
   - component: {fileID: 1698854347}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: snake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mIsTracked: 0
+  deletion_range: 100
   MAX_SPEED: 0.1
   LOWEST_SPEED: 0.04
   facing_right: 0
