@@ -112,8 +112,8 @@ public class TurretBehavior : ShipElem
             invoked_missiles.Add(new_missile);
     
             new_missile.target = target.transform;
-            shoot_target(new_missile.transform, target.transform);
-
+            //shoot_target(new_missile.transform, target.transform);
+            shoot_guided_missile(new_missile.transform);
         } else {
             // Or shoot straight-y
 
@@ -167,5 +167,15 @@ public class TurretBehavior : ShipElem
         var Direction = shoot_straight_direction.position - shooting_point.position;
         RB.AddForce(Direction * mForce, ForceMode2D.Impulse);
         RB.AddTorque(mForce, ForceMode2D.Impulse);
+    }
+
+    private void shoot_guided_missile(Transform iProjectile)
+    {
+        var RB = iProjectile.GetComponent<Rigidbody2D>();
+        var Direction = shoot_straight_direction.position - shooting_point.position;
+        var dampened_force = mForce/4;
+
+        RB.AddForce(Direction * dampened_force, ForceMode2D.Impulse);
+        RB.AddTorque(dampened_force, ForceMode2D.Impulse);
     }
 }

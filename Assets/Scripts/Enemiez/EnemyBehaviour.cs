@@ -9,6 +9,8 @@ public class EnemyBehaviour : MonoBehaviour
     protected GameObject mShipRef = null;
     protected bool destroy_called = false;
 
+    public float deletion_range = 100f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,15 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        deleteIfTooFarUp();   
+    }
+
+    protected void deleteIfTooFarUp()
+    {
+        if ( Vector3.Distance( transform.position, mShipRef.transform.position) > deletion_range )
+        {
+            onDeath();
+        }
     }
 
     protected void onDeath()
@@ -28,7 +38,6 @@ public class EnemyBehaviour : MonoBehaviour
         if (!!sb)
         {
             sb.removeFromScan(this.gameObject);
-            removeFromScan();
         }
 
         Destroy(this.gameObject);
@@ -56,11 +65,6 @@ public class EnemyBehaviour : MonoBehaviour
             if (!sb.mObjects.Contains(this.gameObject))
                 sb.mObjects.Add(this.gameObject);
         }
-    }
-
-    public void removeFromScan()
-    {
-
     }
 
 }
