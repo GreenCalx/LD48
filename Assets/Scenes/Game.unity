@@ -1566,6 +1566,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1120088387546842821, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Mass
+      value: 1.1342793
+      objectReference: {fileID: 0}
     - target: {fileID: 1120088387546842823, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: mEndMarker
       value: 
@@ -1618,6 +1622,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 1501924112417684157, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739532465438535553, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fd05d76296548e14f86ad7c6ec482d3f, type: 3}
+    - target: {fileID: 2234646101647803869, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.31
+      objectReference: {fileID: 0}
     - target: {fileID: 2618121835973840327, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1626,6 +1642,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 532909511}
+    - target: {fileID: 8331285380769277534, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fd05d76296548e14f86ad7c6ec482d3f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71d7c68758a4cbe4ab88f43c4be50570, type: 3}
 --- !u!1001 &1901837104162653162
