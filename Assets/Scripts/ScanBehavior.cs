@@ -86,8 +86,6 @@ public class ScanBehavior : ShipElem
 
     public override void DisplayElem(bool T)
     {
-        base.DisplayElem(T);
-
         if (BlitTexture) BlitTexture.enabled = T;
     }
 
