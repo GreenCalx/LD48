@@ -4,6 +4,7 @@ Shader "Hidden/BackgroundRender"
     {
         _MainTex ("Texture", 2D) = "white" {} 
         _UvShift("CameraPosUVShift", Vector) = (0,0,0,0) 
+        _Color("MulColor", Color) = (0,0,0,0)
     }
     SubShader
     {
@@ -40,11 +41,12 @@ Shader "Hidden/BackgroundRender"
 
             sampler2D _MainTex;
             float4 _UvShift;
+            fixed4 _Color;
 
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv + _UvShift);
-                return col;
+                return col * _Color;
             }
             ENDCG
         }
