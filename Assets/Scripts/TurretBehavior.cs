@@ -108,7 +108,7 @@ public class TurretBehavior : ShipElem
                 target = tracked_damageables[0];
 
             // Invoke right Missile
-            invoked_go = Instantiate(guided_missile);
+            invoked_go = Instantiate(guided_missile, shooting_point.transform.position, Quaternion.identity);
     
             GuidedMissile new_missile = invoked_go.GetComponent<GuidedMissile>();
             invoked_missiles.Add(new_missile);
@@ -119,7 +119,7 @@ public class TurretBehavior : ShipElem
         } else {
             // Or shoot straight-y
 
-            invoked_go = Instantiate(missile);
+            invoked_go = Instantiate(missile, shooting_point.transform.position, Quaternion.identity);
             Missile new_missile = invoked_go.GetComponent<Missile>();
             invoked_missiles.Add(new_missile);
             shoot_straight(new_missile.transform);
