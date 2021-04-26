@@ -6,20 +6,38 @@ public class EnemyBehaviour : MonoBehaviour
 {
 
     public bool mIsTracked = false;
+    private bool mHasMarker = false;
     protected GameObject mShipRef = null;
     protected bool destroy_called = false;
+
+    public Sprite marked_sprite;
+
 
     public float deletion_range = 100f;
 
     // Start is called before the first frame update
     void Start()
     {
+        mHasMarker = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        deleteIfTooFarUp();   
+        deleteIfTooFarUp();
+
+        if (mIsTracked && !mHasMarker)
+        {
+            putMarker();
+        }
+    }
+
+    protected void putMarker()
+    {
+        if (marked_sprite != null)
+        {
+            // TODO
+        }
     }
 
     protected void deleteIfTooFarUp()

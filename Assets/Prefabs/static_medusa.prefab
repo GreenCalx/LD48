@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2484296096690402719}
   - component: {fileID: 2484296096690402718}
   - component: {fileID: 2484296096690402721}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: static_medusa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
