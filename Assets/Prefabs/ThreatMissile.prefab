@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 851261369546202167}
   - component: {fileID: 1895399208788094541}
-  - component: {fileID: 6234624635827777266}
   - component: {fileID: 900670723611135462}
   - component: {fileID: 985223258999030247}
+  - component: {fileID: 8692301915359851183}
   m_Layer: 10
   m_Name: ThreatMissile
   m_TagString: Untagged
@@ -85,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6234624635827777266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8924994412492992005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c12d7e7791a934683f55af1b606936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mDamage: 10
-  mDamageTickRate: 0
-  target: {fileID: 0}
 --- !u!58 &900670723611135462
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,12 +95,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0014262199, y: 0}
   serializedVersion: 2
-  m_Radius: 0.08
+  m_Radius: 0.114228725
 --- !u!50 &985223258999030247
 Rigidbody2D:
   serializedVersion: 4
@@ -128,7 +113,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -137,3 +122,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8692301915359851183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924994412492992005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316a0728d16a5b54c883ddff0f37f2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mDamage: 10
+  mDamageTickRate: 0
+  target: {fileID: 0}
