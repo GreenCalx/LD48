@@ -67,6 +67,12 @@ public class Damageable : MonoBehaviour
     {
         var CollisionDamager = collision.gameObject.GetComponent<Damager>();
 
+        if ( CollisionDamager == null )
+        {
+            Debug.LogError("  ExecuteOnCollide : Missing collision damager on target : " + collision.gameObject.name );
+            return;
+        }
+
         // friendly vs friendly or enemy vs enemy
         if ( CollisionDamager.is_friendly == is_friendly)
             return;
