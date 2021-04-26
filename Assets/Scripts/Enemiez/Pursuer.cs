@@ -39,11 +39,11 @@ public class Pursuer : EnemyBehaviour
 
     private void follow_player()
     {
-        if ( Vector3.Distance(transform.position, self_range.trackedShip.transform.position) <= min_dist_from_player)
+/*         if ( Vector3.Distance(transform.position, self_range.trackedShip.transform.position) <= min_dist_from_player)
             return;
 
         transform.position = Vector3.MoveTowards( transform.position, self_range.trackedShip.transform.position, max_step_for_follow);
-    }
+ */    }
         
     public override void init()
     {
