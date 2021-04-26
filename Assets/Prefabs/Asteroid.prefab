@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6622476925067047159}
   - component: {fileID: 6622476925067047156}
   - component: {fileID: 267303532}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,9 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mIsTracked: 0
+  marked_sprite: {fileID: 0}
   deletion_range: 100
   mFocusedObject: {fileID: 0}
-  mForce: 40
+  mForce: 30
 --- !u!50 &6622476925067047156
 Rigidbody2D:
   serializedVersion: 4
@@ -126,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDamage: 20
-  mDamageTickRate: 0
+  mDamageTickRate: 1
 --- !u!1 &6622476926467036626
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6622476926467036625}
   - component: {fileID: 6622476926467036624}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 4662455286562992223}
   - component: {fileID: 8282633352772391831}
   - component: {fileID: 2157220863793936534}
-  - component: {fileID: 4137913971344295782}
   m_Layer: 11
   m_Name: FlyingPistolero
   m_TagString: Untagged
@@ -164,7 +163,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -200,7 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mIsTracked: 0
-  mExplosionsAudio: {fileID: 0}
+  marked_sprite: {fileID: 0}
+  deletion_range: 100
   should_follow_player: 1
   max_step_for_follow: 0.01
   min_dist_from_player: 3
@@ -325,19 +325,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4137913971344295782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754330550213297111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aecde5fff882f3540ba1c31045599948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mExplosionsSounds: []
 --- !u!1 &8730698784590925834
 GameObject:
   m_ObjectHideFlags: 0
