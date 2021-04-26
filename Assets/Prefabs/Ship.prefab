@@ -115,7 +115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105483910431505209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5422789798278427442}
@@ -357,7 +357,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.1342788
+  m_Mass: 1.1342793
   m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 0.2
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mActivated: 0
-  mConsumption: 10
+  mConsumption: 5
   mAnimationTimer:
     _EndTime: 5
     _AutoRestart: 0
@@ -2301,7 +2301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mActivated: 0
-  mConsumption: 10
+  mConsumption: 20
 --- !u!70 &3768905956920887586
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3031,7 +3031,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3656,7 +3656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mActivated: 0
-  mConsumption: 10
+  mConsumption: 20
   mLifePerFrame: 10
 --- !u!1 &8734565245164342367
 GameObject:
@@ -4480,7 +4480,7 @@ PrefabInstance:
       objectReference: {fileID: 1120088387546842821}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mConsumption
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mContactPoint
@@ -4642,7 +4642,7 @@ PrefabInstance:
       objectReference: {fileID: 1120088387546842821}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mConsumption
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mContactPoint
@@ -4923,7 +4923,7 @@ PrefabInstance:
       objectReference: {fileID: 1120088387546842821}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mConsumption
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4183361446220097409, guid: 3a5443aee2369f9409a89e70b9e77479, type: 3}
       propertyPath: mContactPoint
